@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="row">
     <ais-instant-search
       :search-client="searchClient"
       index-name="jobs"
@@ -20,6 +20,7 @@
             :grid="grid"
             row-key="name"
             color="amber"
+            class="full-width"
           />
         </template>
       </ais-state-results>

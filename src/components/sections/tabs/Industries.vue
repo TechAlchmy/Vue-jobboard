@@ -1,9 +1,11 @@
 <template>
   <div>
     <h1>{{ $t('industries') }}</h1>
-    <span v-for="val in data" :key="val.name">
-      <q-btn no-caps size="xl" :label="val.name" :icon="val.icon" type="a" :href="val.url" />
-    </span>
+    <div class="row">
+      <span v-for="val in data" :key="val.name" class="col-3">
+        <q-btn no-caps size="xl" :label="val.name" :icon="val.icon" type="a" :href="val.url" />
+      </span>
+    </div>
   </div>
 </template>
 
