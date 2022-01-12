@@ -1,12 +1,15 @@
 <template>
-  <div>My component</div>
+  <div>
+    <h1>{{ $t('news-and-topics') }}</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  // name: 'ComponentName',
-  setup () {
-    return {}
+  name: 'NewsAndTopics',
+  setup()
+  {
+    return {};
   }
-}
+};
 </script>

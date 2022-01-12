@@ -1,17 +1,26 @@
 <template>
   <q-page class="flex flex-center">
-    <AlgoliaSearch />
+    <SearchSection />
+    <Advantages />
+    <HappyCustomers />
+    <NewsAndTopics />
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import AlgoliaSearch from 'src/components/AlgoliaSearch.vue';
+import SearchSection from 'src/components/sections/SearchSection.vue';
+import Advantages from 'src/components/sections/Advantages.vue';
+import HappyCustomers from 'src/components/sections/HappyCustomers.vue';
+import NewsAndTopics from 'src/components/sections/NewsAndTopics.vue';
 
 export default defineComponent({
   name: 'Index',
   components: {
-    AlgoliaSearch
+    SearchSection,
+    Advantages,
+    HappyCustomers,
+    NewsAndTopics
   }
 });
 </script>

@@ -32,7 +32,7 @@
 import algoliasearch from 'algoliasearch/lite';
 
 export default {
-  name: 'AlgoliaSearch',
+  name: 'Highlights',
   setup()
   {
     return {
@@ -96,3 +96,14 @@ body
 }
 
 </style>
+
+<i18n>
+{
+  'en': {
+    'search-placeholder': 'Job title, Company or Location',
+  },
+  'de': {
+    'search-placeholder': 'Anzeigentitel, Firma oder Ort',
+  }
+}
+</i18n>

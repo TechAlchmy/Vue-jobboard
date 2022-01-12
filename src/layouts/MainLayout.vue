@@ -19,6 +19,14 @@
       </q-toolbar>
     </q-header>
 
+    <q-footer bordered class="bg-white text-primary">
+      <q-tabs v-model="footer" no-caps active-color="primary" indicator-color="transparent" class="text-grey">
+        <q-tab name="images" :label="$t('imprint')" />
+        <q-tab name="videos" :label="$t('privacy')" />
+        <q-tab name="articles" :label="$t('terms')" />
+      </q-tabs>
+    </q-footer>
+
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>{{ $t('happy-customers') }}</h1>
+    <h1>{{ $t('companies') }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HappyCustomers',
+  name: 'Companies',
   setup()
   {
     return {};
