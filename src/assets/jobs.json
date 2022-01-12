@@ -1,0 +1,38 @@
+[
+    {
+        "id": 23,
+        "createdAt": "2021-12-28T09:12:41.885Z",
+        "title": "Software Developer Strapi (m/w/d)",
+        "reference": "jobwizard",
+        "formattedAddress": "Frankfurt am Main, Deutschland",
+        "url": "/uploads/job_ad_626ab80dc1.html",
+        "organization": "CROSS Solution",
+        "logo": "/uploads/thumbnail_CROSS_LOGO_1240_17680725ea.png",
+        "tasks": "Du entwickelts unser Strapi Backend",
+        "intro": "CROSS Solution is an open source company. We work transparently and fairly. With customers and employees. For the further development of the Jobwizard we are constantly looking for:CROSS Solution is an open source company. We work transparently and fairly. With customers and employees. For the further development of the Jobwizard we are constantly looking for:"
+    },
+    {
+        "id": 26,
+        "createdAt": "2021-12-28T16:37:41.767Z",
+        "title": "Software DeveloperJamStack (m/f/d)",
+        "formattedAddress": "Frankfurt am Main, Deutschland",
+        "reference": "jobwizard",
+        "url": "/uploads/job_ad_626ab80dc1.html",
+        "organization": "CROSS Solution",
+        "logo": "/uploads/thumbnail_CROSS_LOGO_1240_17680725ea.png",
+        "tasks": "We work with modern technologies. Your tasks adapt to your qualifications. Agile coding, prototyping, code reviews",
+        "intro": "CROSS Solution is an open source company. We work transparently and fairly. With customers and employees. For the further development of the Jobwizard we are constantly looking for:CROSS Solution is an open source company. We work transparently and fairly. With customers and employees. For the further development of the Jobwizard we are constantly looking for:"
+    },
+    {
+        "id": 29,
+        "createdAt": "2022-01-06T14:39:00.707Z",
+        "title": "Test Job (m/w/d)",
+        "reference": "jobwizard",
+        "formattedAddress": "Offenbach am Main, Deutschland",
+        "url": "/uploads/job_ad_1a4dc4bb9c.html",
+        "organization": "Fa. Cross Solution",
+        "logo": "",
+        "tasks": "Jest und Cypress Testing",
+        "intro": "CROSS Solution is an open source company. We work transparently and fairly. With customers and employees. For the further development of the Jobwizard we are constantly looking for:CROSS Solution is an open source company. We work transparently and fairly. With customers and employees. For the further development of the Jobwizard we are constantly looking for:"
+    }
+]

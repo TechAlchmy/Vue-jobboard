@@ -1,0 +1,53 @@
+{
+  "name": "job-portal",
+  "version": "0.0.1",
+  "description": "A Quasar Framework app",
+  "productName": "Quasar App",
+  "author": "Carsten Bleek <bleek@cross-solution.de>",
+  "private": true,
+  "scripts": {
+    "dev": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/@quasar/app/bin/quasar dev",
+    "build": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/@quasar/app/bin/quasar build",
+    "lint": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/eslint/bin/eslint --ext .js,.vue src",
+    "lintfix": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/eslint/bin/eslint --ext .js,.vue src --fix",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "algoliasearch": "^4.12.0",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "instantsearch.css": "^7.4.5",
+    "quasar": "^2.0.0",
+    "vue-i18n": "^9.0.0",
+    "vue-instantsearch": "^4.3.1",
+    "vuex": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.13.14",
+    "@intlify/vue-i18n-loader": "^4.1.0",
+    "@quasar/app": "^3.0.0",
+    "dotenv-flow": "^3.2.0",
+    "eslint": "^7.23.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-quasar": "^1.1.0",
+    "eslint-plugin-vue": "^7.8.0",
+    "eslint-webpack-plugin": "^2.4.0",
+    "stylelint": "^13.9.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
+    "stylelint-webpack-plugin": "^1.2.3"
+  },
+  "browserslist": [
+    "last 2 years, >3%, not dead"
+  ],
+  "engines": {
+    "node": ">= 12.22.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
