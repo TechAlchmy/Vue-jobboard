@@ -96,7 +96,8 @@ body
   padding: 1em;
 }
 
-.q-card
+.q-card,
+.ais-InstantSearch
 {
   width: 100%;
 }
