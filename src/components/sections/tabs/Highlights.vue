@@ -96,6 +96,11 @@ body
   padding: 1em;
 }
 
+.q-card
+{
+  width: 100%;
+}
+
 </style>
 
 <i18n>
