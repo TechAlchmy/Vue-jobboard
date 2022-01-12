@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Frankfurt",
+        "icon": "Medizin.png",
+        "url": "http://medizinjob.net"
+    },
+    {
+        "name": "Ingeneure",
+        "icon": "Ingenieur.png",
+        "url": "http://ingenieurforum.de"
+    },
+    {
+        "name": "Bürojobs",
+        "icon": "Buero.png",
+        "url": "http://medizinjob.net"
+    },
+    {
+        "name": "Vertrieb",
+        "icon": "medizinjob.net",
+        "url": "http://medizinjob.net"
+    },
+    {
+        "name": "Technik",
+        "icon": "medizinjob.net",
+        "url": "http://medizinjob.net"
+    },
+    {
+        "name": "IT",
+        "icon": "medizinjob.net",
+        "url": "http://medizinjob.net"
+    },
+    {
+        "name": "Finanz",
+        "icon": "medizinjob.net",
+        "url": "http://medizinjob.net"
+    },
+    {
+        "name": "Karrierestart",
+        "icon": "medizinjob.net",
+        "url": "http://medizinjob.net"
+    },
+    {
+        "name": "Mediakarriere",
+        "icon": "medizinjob.net",
+        "url": "http://medizinjob.net"
+    },
+    {
+        "name": "Handwerkjobs",
+        "icon": "medizinjob.net",
+        "url": "http://medizinjob.net"
+    }
+]

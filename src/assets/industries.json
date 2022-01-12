@@ -1,78 +1,79 @@
 [
     {
+        "name": "Handwerkjobs",
+        "icon": "img:images/handwerk.png",
+        "url": "http://handwerkjobs24.net"
+    },
+    {
         "name": "Medizin",
-        "icon": "Medizin.png",
+        "icon": "img:images/medizin.png",
         "url": "http://medizinjob.net"
     },
     {
         "name": "Ausbildung",
-        "icon": "Stellenmarkt.png",
+        "icon": "img:images/stellenmarkt.png",
         "url": "http://stellenmarkt-bildung.de"
     },
     {
         "name": "Ingeneure",
-        "icon": "Ingenieur.png",
+        "icon": "img:images/ingenieur.png",
         "url": "http://ingenieurforum.de"
     },
     {
         "name": "Bürojobs",
-        "icon": "Buero.png",
-        "url": "http://medizinjob.net"
+        "icon": "img:images/buero.png",
+        "url": "http://buerojobs24.net"
     },
     {
         "name": "Vertrieb",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "icon": "img:images/vertrieb.png",
+        "url": "http://vertriebsjobs.net"
     },
     {
         "name": "Technik",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "icon": "img:images/technik.png",
+        "url": "http://technische-berufe.net"
     },
     {
         "name": "IT",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "icon": "img:images/it.png",
+        "url": "http://it-jobs.net"
     },
     {
         "name": "Finanz",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "icon": "img:images/finanz.png",
+        "url": "http://finanz-jobs.de"
     },
     {
         "name": "Karrierestart",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "icon": "img:images/karriere.png",
+        "url": "http://karrierestart.de"
     },
     {
         "name": "Mediakarriere",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "icon": "img:images/media.png",
+        "url": "http://mediakarriere.de"
     },
-    {
-        "name": "Handwerkjobs",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
-    },
+
     {
         "name": "Hotel",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "icon": "img:images/hot.png",
+        "url": "http://hot-jobs.net"
     },
     {
         "name": "Consult",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "icon": "img:images/consult.png",
+        "url": "http://jobconsult.net"
     },
     {
         "name": "HR",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "icon": "img:images/hr.png",
+        "url": "http://jobs-hr.de"
     },
     {
         "name": "Jura",
         "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "url": "http://jurajob24.de"
     },
     {
         "name": "Logistik",

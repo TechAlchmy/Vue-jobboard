@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Bremer",
+        "icon": "Medizin.png",
+        "url": "http://medizinjob.net"
+    },
+    {
+        "name": "Ausbildung",
+        "icon": "Stellenmarkt.png",
+        "url": "http://stellenmarkt-bildung.de"
+    },
+    {
+        "name": "Ingeneure",
+        "icon": "Ingenieur.png",
+        "url": "http://ingenieurforum.de"
+    },
+    {
+        "name": "Bürojobs",
+        "icon": "Buero.png",
+        "url": "http://medizinjob.net"
+    },
+    {
+        "name": "Vertrieb",
+        "icon": "medizinjob.net",
+        "url": "http://medizinjob.net"
+    },
+    {
+        "name": "Technik",
+        "icon": "medizinjob.net",
+        "url": "http://medizinjob.net"
+    },
+    {
+        "name": "IT",
+        "icon": "medizinjob.net",
+        "url": "http://medizinjob.net"
+    }
+]

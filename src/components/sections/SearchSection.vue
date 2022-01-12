@@ -6,7 +6,7 @@
         inline-label
         outside-arrows
         mobile-arrows
-        class="bg-primary text-white shadow-2"
+        class="full-width bg-primary text-white shadow-2"
       >
         <q-tab name="highlights" icon="mail" :label="$t('hightlights')" />
         <q-tab name="industries" icon="alarm" :label="$t('industries')" />
