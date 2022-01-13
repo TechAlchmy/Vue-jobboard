@@ -1,83 +1,82 @@
 [
     {
         "name": "Handwerkjobs",
-        "icon": "img:images/handwerk.png",
+        "icon": "mdi-hand-saw",
         "url": "http://handwerkjobs24.net"
     },
     {
         "name": "Medizin",
-        "icon": "img:images/medizin.png",
+        "icon": "mdi-hospital-box-outline",
         "url": "http://medizinjob.net"
     },
     {
         "name": "Ausbildung",
-        "icon": "img:images/stellenmarkt.png",
+        "icon": "mdi-school-outline",
         "url": "http://stellenmarkt-bildung.de"
     },
     {
         "name": "Ingeneure",
-        "icon": "img:images/ingenieur.png",
+        "icon": "mdi-engine-outline",
         "url": "http://ingenieurforum.de"
     },
     {
         "name": "Bürojobs",
-        "icon": "img:images/buero.png",
+        "icon": "mdi-chair-rolling",
         "url": "http://buerojobs24.net"
     },
     {
         "name": "Vertrieb",
-        "icon": "img:images/vertrieb.png",
+        "icon": "mdi-gift-outline",
         "url": "http://vertriebsjobs.net"
     },
     {
         "name": "Technik",
-        "icon": "img:images/technik.png",
+        "icon": "mdi-robot-industrial",
         "url": "http://technische-berufe.net"
     },
     {
         "name": "IT",
-        "icon": "img:images/it.png",
+        "icon": "mdi-desktop-classic",
         "url": "http://it-jobs.net"
     },
     {
         "name": "Finanz",
-        "icon": "img:images/finanz.png",
+        "icon": "mdi-bank",
         "url": "http://finanz-jobs.de"
     },
     {
         "name": "Karrierestart",
-        "icon": "img:images/karriere.png",
+        "icon": "mdi-stairs",
         "url": "http://karrierestart.de"
     },
     {
         "name": "Mediakarriere",
-        "icon": "img:images/media.png",
+        "icon": "mdi-folder-multiple-image",
         "url": "http://mediakarriere.de"
     },
-
     {
         "name": "Hotel",
-        "icon": "img:images/hot.png",
+        "icon": "mdi-bed",
         "url": "http://hot-jobs.net"
     },
     {
         "name": "Consult",
-        "icon": "img:images/consult.png",
+        "icon": "mdi-forum-outline",
         "url": "http://jobconsult.net"
     },
     {
         "name": "HR",
-        "icon": "img:images/hr.png",
+        "icon": "mdi-account-group",
         "url": "http://jobs-hr.de"
     },
     {
         "name": "Jura",
-        "icon": "medizinjob.net",
+        "icon": "mdi-scale-balance",
         "url": "http://jurajob24.de"
     },
     {
         "name": "Logistik",
-        "icon": "medizinjob.net",
+        "icon": "mdi-truck-fast-outline",
         "url": "http://medizinjob.net"
     }
 ]

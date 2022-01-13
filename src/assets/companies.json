@@ -1,71 +1,74 @@
 [
     {
-        "name": "Volgswagen AG",
+        "name": "Volgswagen",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/9/90/VWAG-Logo.svg",
         "url": "https://de.wikipedia.org/wiki/Volkswagen_AG",
         "description": "Die Volkswagen Aktiengesellschaft (abgekürzt VW AG oder auch Volkswagen AG) mit Sitz im niedersächsischen Wolfsburg ist ein deutscher Automobilhersteller."
     },
     {
-        "name": "Daimler AG",
+        "name": "Daimler",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f9/DaimlerLogo.svg",
         "url": "https://de.wikipedia.org/wiki/Daimler_AG",
         "description": "Die Daimler AG ist ein börsennotierter deutscher Hersteller von Personenkraftwagen und Nutzfahrzeugen, der auch Mobilitäts- und Finanzdienstleistungen anbietet."
     },
     {
-        "name": "Bayerische Motoren Werke AG",
+        "name": "BMW",
         "logo": "https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/logo/svg/Logo_BMW_GROUP.svg",
         "url": "https://de.wikipedia.org/wiki/BMW",
         "description": "Die Bayerische Motoren Werke Aktiengesellschaft (BMW AG) ist ein börsennotierter Automobil- und Motorradhersteller mit Sitz in München, der auch als BMW Group auftritt."
     },
     {
-        "name": "Siemens AG",
+        "name": "Siemens",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Siemens-logo.svg",
         "url": "https://de.wikipedia.org/wiki/Siemens",
         "description": "Siemens ist ein Mischkonzern mit den Schwerpunkten Automatisierung und Digitalisierung in der Industrie, Infrastruktur für Gebäude, dezentrale Energiesysteme, Mobilitätslösungen für den Schienen- und Straßenverkehr sowie Medizintechnik."
     },
     {
-        "name": "Deutsche Telekom AG",
-        "logo": "medizinjob.net",
-        "url": "/"
+        "name": "Deutsche Telekom",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Telekom_Logo_2013.svg",
+        "url": "https://de.wikipedia.org/wiki/Deutsche_Telekom",
+        "description": "Die Deutsche Telekom AG ist die Dachgesellschaft von Europas größtem Tele­kommunikations­unternehmen[4] mit Hauptsitz in Bonn."
     },
     {
         "name": "Bayer AG",
-        "logo": "medizinjob.net",
-        "url": "/"
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Logo_Bayer.svg",
+        "url": "https://de.wikipedia.org/wiki/Bayer_AG",
+        "description": "Die Bayer Aktiengesellschaft (kurz Bayer AG) mit Sitz in Leverkusen ist ein börsennotierter Chemie- und Pharmakonzern mit insgesamt rund 99.500 Mitarbeitern (Stand: Jahresende 2020)"
     },
     {
-        "name": "STRABAG-Gruppe Deutschland",
-        "logo": "Medizin.png",
-        "url": "/"
+        "name": "STRABAG-Gruppe",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Strabag_SE_Logo_2008.svg",
+        "url": "https://de.wikipedia.org/wiki/Strabag",
+        "description": "Die Strabag SE ist ein börsennotiertes österreichisches Unternehmen mit Hauptsitz in Wien. Strabag ist eines der größten Bauunternehmen Europas und neben den Kernmärkten Österreich und Deutschland in zahlreichen ost- und südosteuropäischen Ländern in der Bauindustrie tätig"
     },
     {
         "name": "KfW Bankengruppe",
-        "logo": "Stellenmarkt.png",
-        "url": "/"
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/59/KfW_Bankengruppe.svg",
+        "url": "https://de.wikipedia.org/wiki/KfW",
+        "description": "Die KfW oder Kreditanstalt für Wiederaufbau ist eine deutsche Förderbank und eine der führenden Förderbanken der Welt."
     },
     {
-        "name": "Asklepios Kliniken GmbH & Co. KGaA",
-        "logo": "Ingenieur.png",
-        "url": "/"
+        "name": "Asklepios Kliniken",
+        "logo": "https://upload.wikimedia.org/wikipedia/de/9/9f/Logo_Asklepios_Kliniken_Hamburg.svg",
+        "url": "https://de.wikipedia.org/wiki/Asklepios_Kliniken",
+        "description": "Die Asklepios-Kliniken-Gruppe ist ein primär in Deutschland agierender Klinikbetreiber mit Hauptsitz in Hamburg."
     },
     {
-        "name": "Asklepios Kliniken GmbH & Co. KGaA",
-        "logo": "Buero.png",
-        "url": "/"
+        "name": "Rethmann",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Rethmann.svg",
+        "url": "https://de.wikipedia.org/wiki/Rethmann",
+        "description": "Die Rethmann SE & Co. KG ist die Muttergesellschaft der international agierenden Unternehmensgruppen Remondis (Recycling, Service, Wasser), Rhenus (Logistik) und Saria (Verarbeitung von tierischen Nebenprodukten und organischen Reststoffen)"
     },
     {
-        "name": "Rethmann SE & Co. KG",
-        "logo": "medizinjob.net",
-        "url": "/"
-    },
-    {
-        "name": "C.H. Boehringer Sohn AG & Co. KG",
-        "logo": "medizinjob.net",
-        "url": "/"
+        "name": "Boehringer",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/7/74/Boehringer_Ingelheim_Logo.svg",
+        "url": "https://de.wikipedia.org/wiki/Boehringer_Ingelheim",
+        "description": "Boehringer Ingelheim ist ein Pharmaunternehmen, das 1885 von Albert Boehringer in Ingelheim am Rhein gegründet wurde."
     },
     {
         "name": "Commerzbank AG",
-        "logo": "medizinjob.net",
-        "url": "/"
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/49/Commerzbank_%282009%29.svg",
+        "url": "https://de.wikipedia.org/wiki/Commerzbank",
+        "description": "Die Commerzbank Aktiengesellschaft ist ein als Universalbank tätiges deutsches Kreditinstitut mit Sitz in Frankfurt am Main."
     }
 ]

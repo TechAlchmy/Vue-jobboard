@@ -7,7 +7,7 @@
           <q-item>
             <q-item-section avatar>
               <q-avatar>
-                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+                <img :src="val.avatar">
               </q-avatar>
             </q-item-section>
 

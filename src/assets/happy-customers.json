@@ -1,20 +1,26 @@
 [
     {
         "title": "Carsten Bleek",
-        "subtitle": "product-owner",
-        "description": "lorem-ipsum",
-        "icon": "image.png"
+        "subtitle": "Inhaber",
+        "description": "mit dem YAWIK können wit einfach Stellenanzeigen erstellen und Vakanzen besetzen.",
+        "avatar": "https://secure.gravatar.com/avatar/c51d961553bd9e448b0768c401e98e7b?s=180&d=identicon",
+        "company": "CROSS Solution",
+        "logo": "https://old.cross-solution.de/wp-content/themes/cross/images/logo.gif"
     },
     {
         "title": "Max Mustermann",
-        "subtitle": "product-owner",
+        "subtitle": "Produkt Owner",
         "description": "lorem-ipsum",
-        "icon": "image.png"
+        "avatar": "https://cdn.quasar.dev/img/boy-avatar.png",
+        "company": "Company ABC AG",
+        "logo": ""
     },
     {
         "title": "Erika Musterfrau",
-        "subtitle": "product-owner",
+        "subtitle": "Leitung HR",
         "description": "lorem-ipsum",
-        "icon": "image.png"
+        "avatar": "https://cdn.quasar.dev/img/boy-avatar.png",
+        "company": "Next Company DEF Ltd.",
+        "logo": ""
     }
 ]

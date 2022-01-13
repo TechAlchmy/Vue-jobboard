@@ -1,14 +1,14 @@
 [
     {
         "name": "Frankfurt am Main",
-        "icon": "Medizin.png",
+        "region": "Hessen",
         "url": "http://jobs-frankfurt.de",
         "wikipedia": "https://de.wikipedia.org/wiki/Frankfurt_am_Main",
         "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/6/65/Wappen_Frankfurt_am_Main.svg"
     },
     {
         "name": "Berlin",
-        "icon": "Ingenieur.png",
+        "region": "Berlin",
         "url": "http://jobs-berlin.de",
         "wikipedia": "https://de.wikipedia.org/wiki/Berlin",
         "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/d/d9/Coat_of_arms_of_Berlin.svg"
@@ -16,27 +16,72 @@
     },
     {
         "name": "Bremen",
-        "icon": "Buero.png",
-        "url": "http://jobs-bremen.de"
+        "region": "Bremen",
+        "url": "http://jobs-bremen.de",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/6/64/Bremen_Wappen%28Mittel%29.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Bremen"
     },
     {
         "name": "Hamburg",
-        "icon": "medizinjob.net",
-        "url": "http://jobs-hamburg.de"
+        "region": "Hamburg",
+        "url": "http://jobs-hamburg.de",
+        "wikipedia": "https://de.wikipedia.org/wiki/Hamburg",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/6/63/Wappen_der_Hamburgischen_B%C3%BCrgerschaft.svg"
     },
     {
         "name": "Karben",
-        "icon": "medizinjob.net",
-        "url": "http://jobs-karben.de"
+        "region": "Hessen",
+        "url": "http://jobs-karben.de",
+        "wikipedia": "https://de.wikipedia.org/wiki/Karben",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/c/ce/Wappen_Karben.png"
     },
     {
         "name": "Mainz",
-        "icon": "medizinjob.net",
-        "url": "http://jobsmainz.de"
+        "region": "Rheinland-Pflaz",
+        "url": "http://jobsmainz.de",
+        "wikipedia": "https://de.wikipedia.org/wiki/Mainz",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/6/67/Coat_of_arms_of_Mainz-2008_new.svg"
     },
     {
         "name": "Düsseldorf",
-        "icon": "medizinjob.net",
-        "url": "http://jobs-duesseldorf.de"
+        "region": "Niedersachsen",
+        "url": "http://jobs-duesseldorf.de",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/8/83/DEU_D%C3%BCsseldorf_COA.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/D%C3%BCsseldorf"
+    },
+    {
+        "name": "Stuttgart",
+        "region": "Baden-Württemberg",
+        "url": "http://jobs-duesseldorf.de",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/f/f8/Coat_of_arms_of_Stuttgart.svg",
+        "wikipedia": "https://upload.wikimedia.org/wikipedia/commons/f/f1/DEU_Koeln_COA.svg"
+    },
+    {
+        "name": "Köln",
+        "region": "Nordrhein-Westfalen",
+        "url": "http://jobs-duesseldorf.de",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/f/f1/DEU_Koeln_COA.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/K%C3%B6ln"
+    },
+    {
+        "name": "München",
+        "region": "Bayern",
+        "url": "http://jobs-duesseldorf.de",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/1/17/Muenchen_Kleines_Stadtwappen.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/M%C3%BCnchen"
+    },
+    {
+        "name": "Leipzig",
+        "region": "Sachsen",
+        "url": "http://jobs-duesseldorf.de",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/4/47/Coat_of_arms_of_Leipzig.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Leipzig"
+    },
+    {
+        "name": "Bonn",
+        "region": "Nordrhein-Westfalen",
+        "url": "http://jobs-duesseldorf.de",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/8/83/DEU_D%C3%BCsseldorf_COA.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/D%C3%BCsseldorf"
     }
 ]

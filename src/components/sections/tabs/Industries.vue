@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h1>{{ $t('industries') }}</h1>
     <div class="row">
       <span v-for="val in data" :key="val.name" class="col-3">
-        <q-btn no-caps size="xl" :label="val.name" :icon="val.icon" type="a" :href="val.url" />
+        <q-btn class="full-width" stack no-caps size="xl" :label="val.name" :icon="val.icon" type="a" :href="val.url" />
       </span>
     </div>
   </div>
