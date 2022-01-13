@@ -21,6 +21,7 @@
         <q-btn no-caps stretch flat :label="$t('infos-for-applicant')" to="info" />
         <q-separator dark vertical />
         <q-space />
+        <SwitchLanguage />
         <q-btn outline class="shadow-2" color="white" type="a" href="https://jobwizard.yawik.org" :label="$t('create-job')" />
       </q-toolbar>
     </q-header>
@@ -109,12 +110,14 @@ const linksList = [
 ];
 
 import { defineComponent, ref } from 'vue';
+import SwitchLanguage from 'src/components/SwitchLanguage.vue';
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    EssentialLink,
+    SwitchLanguage
   },
 
   setup()
@@ -139,10 +142,12 @@ export default defineComponent({
   "en": {
     "job-portal": "Job portal",
     "jobs": "Jobs",
+    "create-job": "Create Job",
     "infos-for-applicant": "Candidate information"
   },
   "de": {
     "job-portal": "Stellenbörse",
+    "create-job": "Stellenanzeige erstellen",
     "jobs": "Stellenanzeigen",
     "infos-for-applicant": "Bewerberinformatinen"
   }

@@ -44,3 +44,14 @@ export default {
 }
 
 </style>
+
+<i18n>
+{
+  "en": {
+    "advantages": "Advantages",
+  },
+  "de": {
+    "advantages": "Ihre Vorteile",
+  }
+}
+</i18n>

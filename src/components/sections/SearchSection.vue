@@ -7,7 +7,7 @@
         outside-arrows
         mobile-arrows
         no-caps
-        class="full-width bg-primary text-white shadow-2"
+        class="full-width bg-primary text-white"
       >
         <q-tab name="highlights" icon="mdi-party-popper" :label="$t('hightlights')" />
         <q-tab name="industries" icon="mdi-factory" :label="$t('industries')" />
@@ -83,6 +83,12 @@ body
     "companies": "Companies",
     "cities": "Cities",
     "industries": "Industries",
+    "highlights": "Highlights",
+  },
+  "de": {
+    "companies": "Unternehmen",
+    "cities": "Städte",
+    "industries": "Branchen",
     "highlights": "Highlights",
   }
 }

@@ -38,3 +38,14 @@ export default {
   },
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "news-and-topics": "News & Topics",
+  },
+  "de": {
+    "news-and-topics": "Aktuelles & Themen",
+  }
+}
+</i18n>

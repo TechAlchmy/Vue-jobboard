@@ -53,3 +53,14 @@ export default {
   },
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "happy-customers": "Happy customers",
+  },
+  "de": {
+    "happy-customers": "Zufriedene Kunden",
+  }
+}
+</i18n>
