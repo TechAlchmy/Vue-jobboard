@@ -63,49 +63,50 @@
 
 <script>
 import EssentialLink from 'components/EssentialLink.vue';
+import { useMeta } from 'quasar';
+
+const metaData = {
+  title: 'JobBoard',
+  titleTemplate: title => `${title} - Stellenanzeigen finden`,
+  meta: {
+    description: {
+      name: 'description',
+      content: 'Das Yawik Jobboard bietet eine Suche für Stellenanzeigen, die mit dem Jobwizard erstellt wurden'
+    },
+    keywords: {
+      name: 'keywords',
+      content: 'Jobboard, Stellenanzeigen, Stellenangebote'
+    }
+  },
+  link: {
+    material: {
+      rel: 'canonical',
+      href: 'https://jobboard.yawik.org' + window.location.pathname
+    }
+  },
+  noscript: {
+    default: 'Das Yawik Jobboard benötigt Javascript'
+  }
+};
 
 const linksList = [
   {
     title: 'Docs',
-    caption: 'quasar.dev',
+    caption: 'yawik',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: 'https://jobwizard.yawik.org/docs'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
+    title: 'Gitlab',
+    caption: 'gitlab.com/yawik/job-portal',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: 'https://gitlab.com/yawik/job-portal'
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
+    title: 'Bewerbungsformulare',
+    caption: 'Bewerbungen strukturiert per Mail',
     icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    link: 'https://form.yawik.org'
   }
 ];
 
@@ -123,6 +124,8 @@ export default defineComponent({
   setup()
   {
     const leftDrawerOpen = ref(false);
+
+    useMeta(metaData);
 
     return {
       essentialLinks: linksList,
