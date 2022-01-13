@@ -2,12 +2,11 @@
   <div>
     <div class="row">
       <span v-for="val in data" :key="val.name" class="col-3">
-        <q-card class="my-card">
-          <img :src="val.logo" style="height: 50px;">
+        <q-card class="fit">
           <q-card-section class="bg-primary text-white">
             <div class="text-h6">{{ val.name }}</div>
           </q-card-section>
-
+          <q-img :src="val.logo" fit="contain" img-class="company-logo" height="50px" />
           <q-separator />
           <q-card-section>
             <div>{{ val.description }}</div>
@@ -36,3 +35,17 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+
+.company-logo
+{
+  filter: grayscale(1);
+}
+
+.company-logo:hover
+{
+  filter: grayscale(0);
+}
+
+</style>
