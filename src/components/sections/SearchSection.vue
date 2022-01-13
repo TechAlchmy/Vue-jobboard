@@ -6,12 +6,13 @@
         inline-label
         outside-arrows
         mobile-arrows
+        no-caps
         class="full-width bg-primary text-white shadow-2"
       >
-        <q-tab name="highlights" icon="mail" :label="$t('hightlights')" />
-        <q-tab name="industries" icon="alarm" :label="$t('industries')" />
-        <q-tab name="cities" icon="movie" :label="$t('cities')" />
-        <q-tab name="companies" icon="photo" :label="$t('companies')" />
+        <q-tab name="highlights" icon="mdi-party-popper" :label="$t('hightlights')" />
+        <q-tab name="industries" icon="mdi-factory" :label="$t('industries')" />
+        <q-tab name="cities" icon="mdi-map-marker" :label="$t('cities')" />
+        <q-tab name="companies" icon="mdi-domain" :label="$t('companies')" />
       </q-tabs>
 
       <q-separator />
@@ -75,3 +76,14 @@ body
 }
 
 </style>
+
+<i18n>
+{
+  "en": {
+    "companies": "Companies",
+    "cities": "Cities",
+    "industries": "Industries",
+    "highlights": "Highlights",
+  }
+}
+</i18n>

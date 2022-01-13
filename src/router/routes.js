@@ -7,7 +7,18 @@ const routes = [
       {
         path: '',
         component: () => import('pages/Index.vue')
-      }
+      },
+      {
+        path: 'jobs',
+        name: 'jobs',
+        component: () => import('pages/Jobs.vue'),
+      },
+      {
+        path: 'info',
+        name: 'info',
+        component: () => import('pages/Info.vue'),
+      },
+
     ]
   },
 

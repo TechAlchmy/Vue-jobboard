@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header reveal elevated>
       <q-toolbar>
         <q-btn
           flat
@@ -10,20 +10,27 @@
           :aria-label="$t('menu')"
           @click="toggleLeftDrawer"
         />
-
-        <q-toolbar-title>
-          {{ $t('job portal') }}
+        <q-toolbar-title class="logo">
+          <q-btn no-caps flat icon="img:../../yawik_logo-mobile.svg" to="/">
+            {{ '&nbsp;' + $t('job portal') }}
+          </q-btn>
         </q-toolbar-title>
-
-        <div>{{ $t('Quasar v') + $q.version }}</div>
+        <q-separator dark vertical />
+        <q-btn no-caps stretch flat :label="$t('jobs')" to="jobs" />
+        <q-separator dark vertical />
+        <q-btn no-caps stretch flat :label="$t('infos-for-applicant')" to="info" />
+        <q-separator dark vertical />
+        <q-space />
+        <q-btn outline class="shadow-2" color="white" type="a" href="https://jobwizard.yawik.org" :label="$t('create-job')" />
       </q-toolbar>
     </q-header>
 
     <q-footer bordered class="bg-white text-primary">
       <q-tabs v-model="footer" no-caps active-color="primary" indicator-color="transparent" class="text-grey">
-        <q-tab name="images" :label="$t('imprint')" />
-        <q-tab name="videos" :label="$t('privacy')" />
-        <q-tab name="articles" :label="$t('terms')" />
+        <q-tab name="imprint" :label="$t('imprint')" />
+        <q-tab name="privary" :label="$t('privacy')" />
+        <q-tab name="terms" :label="$t('terms')" />
+        <div>{{ $t('Quasar v') + $q.version }}</div>
       </q-tabs>
     </q-footer>
 
@@ -124,15 +131,20 @@ export default defineComponent({
     };
   }
 });
+
 </script>
 
 <i18n>
 {
-  'en': {
-    'job-portal': 'Job portal'
+  "en": {
+    "job-portal": "Job portal",
+    "jobs": "Jobs",
+    "infos-for-applicant": "Candidate information"
   },
-  'de': {
-    'job-portal': 'Stellenbörse'
+  "de": {
+    "job-portal": "Stellenbörse",
+    "jobs": "Stellenanzeigen",
+    "infos-for-applicant": "Bewerberinformatinen"
   }
 }
 </i18n>
