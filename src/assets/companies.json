@@ -1,37 +1,71 @@
 [
     {
-        "name": "Bremer",
-        "icon": "Medizin.png",
-        "url": "http://medizinjob.net"
+        "name": "Volgswagen AG",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/9/90/VWAG-Logo.svg",
+        "url": "https://de.wikipedia.org/wiki/Volkswagen_AG",
+        "description": "Die Volkswagen Aktiengesellschaft (abgekürzt VW AG oder auch Volkswagen AG) mit Sitz im niedersächsischen Wolfsburg ist ein deutscher Automobilhersteller."
     },
     {
-        "name": "Ausbildung",
-        "icon": "Stellenmarkt.png",
-        "url": "http://stellenmarkt-bildung.de"
+        "name": "Daimler AG",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f9/DaimlerLogo.svg",
+        "url": "https://de.wikipedia.org/wiki/Daimler_AG",
+        "description": "Die Daimler AG ist ein börsennotierter deutscher Hersteller von Personenkraftwagen und Nutzfahrzeugen, der auch Mobilitäts- und Finanzdienstleistungen anbietet."
     },
     {
-        "name": "Ingeneure",
-        "icon": "Ingenieur.png",
-        "url": "http://ingenieurforum.de"
+        "name": "Bayerische Motoren Werke AG",
+        "logo": "https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/logo/svg/Logo_BMW_GROUP.svg",
+        "url": "https://de.wikipedia.org/wiki/BMW",
+        "description": "Die Bayerische Motoren Werke Aktiengesellschaft (BMW AG) ist ein börsennotierter Automobil- und Motorradhersteller mit Sitz in München, der auch als BMW Group auftritt."
     },
     {
-        "name": "Bürojobs",
-        "icon": "Buero.png",
-        "url": "http://medizinjob.net"
+        "name": "Siemens AG",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Siemens-logo.svg",
+        "url": "https://de.wikipedia.org/wiki/Siemens",
+        "description": "Siemens ist ein Mischkonzern mit den Schwerpunkten Automatisierung und Digitalisierung in der Industrie, Infrastruktur für Gebäude, dezentrale Energiesysteme, Mobilitätslösungen für den Schienen- und Straßenverkehr sowie Medizintechnik."
     },
     {
-        "name": "Vertrieb",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "name": "Deutsche Telekom AG",
+        "logo": "medizinjob.net",
+        "url": "/"
     },
     {
-        "name": "Technik",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "name": "Bayer AG",
+        "logo": "medizinjob.net",
+        "url": "/"
     },
     {
-        "name": "IT",
-        "icon": "medizinjob.net",
-        "url": "http://medizinjob.net"
+        "name": "STRABAG-Gruppe Deutschland",
+        "logo": "Medizin.png",
+        "url": "/"
+    },
+    {
+        "name": "KfW Bankengruppe",
+        "logo": "Stellenmarkt.png",
+        "url": "/"
+    },
+    {
+        "name": "Asklepios Kliniken GmbH & Co. KGaA",
+        "logo": "Ingenieur.png",
+        "url": "/"
+    },
+    {
+        "name": "Asklepios Kliniken GmbH & Co. KGaA",
+        "logo": "Buero.png",
+        "url": "/"
+    },
+    {
+        "name": "Rethmann SE & Co. KG",
+        "logo": "medizinjob.net",
+        "url": "/"
+    },
+    {
+        "name": "C.H. Boehringer Sohn AG & Co. KG",
+        "logo": "medizinjob.net",
+        "url": "/"
+    },
+    {
+        "name": "Commerzbank AG",
+        "logo": "medizinjob.net",
+        "url": "/"
     }
 ]

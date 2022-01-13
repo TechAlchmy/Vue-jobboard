@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Carsten Bleek",
+        "subtitle": "product-owner",
+        "description": "lorem-ipsum",
+        "icon": "image.png"
+    },
+    {
+        "title": "Max Mustermann",
+        "subtitle": "product-owner",
+        "description": "lorem-ipsum",
+        "icon": "image.png"
+    },
+    {
+        "title": "Erika Musterfrau",
+        "subtitle": "product-owner",
+        "description": "lorem-ipsum",
+        "icon": "image.png"
+    }
+]

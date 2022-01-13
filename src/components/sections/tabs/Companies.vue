@@ -4,6 +4,7 @@
     <div class="row">
       <span v-for="val in data" :key="val.name" class="col-3">
         <q-card class="my-card">
+          <img :src="val.logo">
           <q-card-section class="bg-primary text-white">
             <div class="text-h6">{{ val.name }}</div>
             <div class="text-subtitle2">{{ val }}</div>
