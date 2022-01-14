@@ -1,17 +1,17 @@
 [
     {
         "title": "fast",
-        "description": "lorem-ipsum",
-        "icon": "image.png"
+        "description": "fast-text",
+        "icon": "mdi-rabbit"
     },
     {
-        "title": "all-from-one-source",
-        "description": "lorem-ipsum",
-        "icon": "image.png"
+        "title": "simple",
+        "description": "simple-text",
+        "icon": "mdi-duck"
     },
     {
-        "title": "daily-new-jobs",
-        "description": "lorem-ipsum",
-        "icon": "image.png"
+        "title": "open-source",
+        "description": "open-source-text",
+        "icon": "mdi-linux"
     }
 ]
