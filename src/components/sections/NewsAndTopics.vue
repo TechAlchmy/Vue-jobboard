@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div align="center">
     <h1>{{ $t('news-and-topics') }}</h1>
-    <div class="row">
+    <div class="row q-gutter-md justify-center">
       <span v-for="val in data" :key="val.name" class="col-3">
         <q-card class="customers">
           <img :src="val.image">

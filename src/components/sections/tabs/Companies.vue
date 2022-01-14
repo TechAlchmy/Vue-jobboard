@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="row q-gutter-md">
+    <div class="row q-gutter-md justify-center">
       <span v-for="val in data" :key="val.name" class="col-md-3">
-        <q-card class="fit flip-front">
+        <q-card class="fit">
           <q-card-section>
             <q-img :src="val.logo" fit="contain" img-class="company-logo" height="50px" />
           </q-card-section>

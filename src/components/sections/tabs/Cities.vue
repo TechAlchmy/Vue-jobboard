@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row">
+    <div class="row q-gutter-md justify-center">
       <span v-for="val in data" :key="val.name" class="col-3">
         <q-card class="q-py-md-md">
           <q-item>

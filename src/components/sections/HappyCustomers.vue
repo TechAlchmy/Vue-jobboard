@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div align="center">
     <h1>{{ $t('happy-customers') }}</h1>
-    <div class="row">
+    <div class="row justify-center q-gutter.md">
       <span v-for="val in data" :key="val.name" class="col-3">
-        <q-card class="customers">
+        <q-card class="customers fit">
           <q-item>
             <q-item-section avatar>
               <q-avatar>
@@ -40,6 +40,7 @@
 </template>
 
 <script>
+
 import data from 'src/assets/happy-customers.json';
 
 export default {

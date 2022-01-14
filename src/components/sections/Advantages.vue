@@ -1,19 +1,18 @@
 <template>
   <div align="center">
     <h1>{{ $t('advantages') }}</h1>
-    <div class="row items-center">
+    <div class="row justify-center q-gutter-md">
       <span v-for="val in data" :key="val.name" class="col-3">
-        <q-card class="advantages">
+        <q-card class="advantages fit">
           <q-icon style="font-size: 6em;" color="primary" :name="val.icon" />
+
           <q-card-section>
             <div class="text-h6">{{ $t(val.title) }}</div>
             <div class="text-subtitle2">{{ $t(val.description) }}</div>
           </q-card-section>
 
-          <q-separator />
-
           <q-card-actions align="right">
-            <q-btn flat>{{ $t('more') }}</q-btn>
+            <q-btn color="primary" outline flat>{{ $t('more') }}</q-btn>
           </q-card-actions>
         </q-card>
       </span>
@@ -39,7 +38,7 @@ export default {
 
 .advantages
 {
-  color: red;
+  background-color: #EEE;
 }
 
 </style>
@@ -48,8 +47,8 @@ export default {
 {
   "en": {
     "advantages": "Advantages",
-    "fast": "Schnell",
-    "fast-text": "You get applications quickly. Don't negotiate long, just get started.",
+    "fast": "Fast",
+    "fast-text": "You get applicants quickly. You don't have to negotiate for a long time with many parties. You can just get started!",
     "simple": "Simple",
     "simple-text": "Everything is simple. Entering a job advertisement. Integrating it into the homepage and placing it on Google",
     "open-source": "Open Source",
@@ -59,7 +58,7 @@ export default {
   "de": {
     "advantages": "Ihre Vorteile",
     "fast": "Schnell",
-    "fast-text": "Sie bekommen schnell Bewerbungen. Nicht lange verhandeln, einfach loslegen.",
+    "fast-text": "Sie bekommen schnell Bewerber. Sie müssen nicht lange mit vielen Parteien verhandeln. Sie können einfach loslegen!",
     "simple": "Einfach",
     "simple-text": "Alles ist einfach. Die Eingabe einer Stellenanzeige. Das einbinden in der Hompage und das schalten auf Google",
     "open-source": "Open Source",
