@@ -1,23 +1,22 @@
 <template>
-  <div>
-    <div class="row q-gutter-md justify-center">
-      <span v-for="val in data" :key="val.name" class="col-md-3">
-        <q-card class="fit">
-          <q-card-section>
-            <q-img :src="val.logo" fit="contain" img-class="company-logo" height="50px" />
-          </q-card-section>
-          <q-separator />
-          <q-card-section>
-            <div>{{ val.description }}</div>
-          </q-card-section>
-          <q-separator />
-          <q-card-actions align="right">
-            <q-btn no-caps flat>{{ $t('jobs') }}</q-btn>
-            <q-btn icon="mdi-wikipedia" type="a" :href="val.wikipedia" flat />
-          </q-card-actions>
-        </q-card>
-      </span>
-    </div>
+  <div class="row q-gutter-md justify-center" align="center">
+    <div class="text-h6 full-width">{{ $t('companies') }}</div>
+    <span v-for="val in data" :key="val.name" class="col-md-3">
+      <q-card class="fit">
+        <q-card-section>
+          <q-img :src="val.logo" fit="contain" img-class="company-logo" height="50px" />
+        </q-card-section>
+        <q-separator />
+        <q-card-section>
+          <div>{{ val.description }}</div>
+        </q-card-section>
+        <q-separator />
+        <q-card-actions align="right">
+          <q-btn no-caps flat>{{ $t('jobs') }}</q-btn>
+          <q-btn icon="mdi-wikipedia" type="a" :href="val.wikipedia" flat />
+        </q-card-actions>
+      </q-card>
+    </span>
   </div>
 </template>
 

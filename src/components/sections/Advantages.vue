@@ -1,6 +1,6 @@
 <template>
   <div align="center">
-    <h1>{{ $t('advantages') }}</h1>
+    <h2>{{ $t('advantages') }}</h2>
     <div class="row justify-center q-gutter-md">
       <span v-for="val in data" :key="val.name" class="col-3">
         <q-card class="advantages fit">

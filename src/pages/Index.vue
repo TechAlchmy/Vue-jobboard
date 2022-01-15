@@ -1,5 +1,6 @@
 <template>
   <q-page>
+    <h1>{{ $t('sightly-different-jobboard') }}</h1>
     <SearchSection />
     <Advantages />
     <HappyCustomers />
@@ -24,3 +25,20 @@ export default defineComponent({
   }
 });
 </script>
+
+<i18n>
+{
+  "en": {
+    "sightly-different-jobboard": "a slightly different jobboard",
+    "cities": "Cities",
+    "industries": "Industries",
+    "highlights": "Highlights",
+  },
+  "de": {
+    "sightly-different-jobboard": "ein etwas anderes Jobportal.",
+    "cities": "Städte",
+    "industries": "Branchen",
+    "highlights": "Highlights",
+  }
+}
+</i18n>

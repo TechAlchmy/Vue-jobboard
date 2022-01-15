@@ -1,10 +1,9 @@
 <template>
-  <div>
-    <div class="row q-gutter-md justify-center">
-      <span v-for="val in data" :key="val.name" class="col-3">
-        <q-btn class="full-width" stack no-caps size="xl" :label="val.name" :icon="val.icon" type="a" :href="val.url" />
-      </span>
-    </div>
+  <div class="row q-gutter-md justify-center" align="center">
+    <div class="text-h6 full-width">{{ $t('industries') }}</div>
+    <span v-for="val in data" :key="val.name" class="col-3">
+      <q-btn class="full-width" stack no-caps size="xl" :label="val.name" :icon="val.icon" type="a" :href="val.url" />
+    </span>
   </div>
 </template>
 

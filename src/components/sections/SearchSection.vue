@@ -19,23 +19,19 @@
 
       <q-tab-panels v-model="tab" animated>
         <q-tab-panel name="highlights">
-          <div class="text-h6">{{ $t('hightlights') }}</div>
-          <highlights />
+          <highlights :title="$t('highlights')" />
         </q-tab-panel>
 
         <q-tab-panel name="industries">
-          <div class="text-h6">{{ $t('industries') }}</div>
-          <industries />
+          <industries :title="$t('industries')" />
         </q-tab-panel>
 
         <q-tab-panel name="cities">
-          <div class="text-h6">{{ $t('cities') }}</div>
-          <cities />
+          <cities :title="$t('cities')" />
         </q-tab-panel>
 
         <q-tab-panel name="companies">
-          <div class="text-h6">{{ $t('companies') }}</div>
-          <companies />
+          <companies :title="$t('companies')" />
         </q-tab-panel>
       </q-tab-panels>
     </q-card>
@@ -80,13 +76,13 @@ body
 <i18n>
 {
   "en": {
-    "companies": "Companies",
+    "companies": "big Companies",
     "cities": "Cities",
     "industries": "Industries",
     "highlights": "Highlights",
   },
   "de": {
-    "companies": "Unternehmen",
+    "companies": "große Unternehmen",
     "cities": "Städte",
     "industries": "Branchen",
     "highlights": "Highlights",

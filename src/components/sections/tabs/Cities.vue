@@ -1,23 +1,22 @@
 <template>
-  <div>
-    <div class="row q-gutter-md justify-center">
-      <span v-for="val in data" :key="val.name" class="col-3">
-        <q-card class="q-py-md-md">
-          <q-item>
-            <q-item-section avatar>
-              <q-icon size="xl" :name="val.wappen" />
-            </q-item-section>
+  <div class="row q-gutter-md justify-center" align="center">
+    <div class="text-h6 full-width">{{ $t('cities') }}</div>
+    <span v-for="val in data" :key="val.name" class="col-3">
+      <q-card class="q-py-md-md">
+        <q-item>
+          <q-item-section avatar>
+            <q-icon size="xl" :name="val.wappen" />
+          </q-item-section>
 
-            <q-item-section>
-              <q-item-label>{{ val.name }}</q-item-label>
-              <q-item-label caption>
-                {{ val.region }}
-              </q-item-label>
-            </q-item-section>
-          </q-item>
-        </q-card>
-      </span>
-    </div>
+          <q-item-section>
+            <q-item-label>{{ val.name }}</q-item-label>
+            <q-item-label caption>
+              {{ val.region }}
+            </q-item-label>
+          </q-item-section>
+        </q-item>
+      </q-card>
+    </span>
   </div>
 </template>
 

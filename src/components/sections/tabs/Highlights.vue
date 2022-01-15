@@ -1,27 +1,26 @@
 <template>
-  <div class="row">
+  <div class="row justify-center" align="center">
+    <div class="text-h6">{{ $t('hightlights') }}</div>
     <ais-instant-search
       :search-client="searchClient"
       index-name="jobs"
     >
-      <ais-search-box
-        :placeholder="$t('search-placeholder')"
-        submit-title="string"
-        reset-title="string"
-        :autofocus="true"
-      />
       <ais-state-results>
-        <template #default="{ results: { hits, query } }">
-          {{ query }}
-          <q-table
-            :title="$t('jobs')"
-            :rows="hits"
-            :columns="columns"
-            :grid="grid"
-            row-key="name"
-            color="amber"
-            class="full-width"
-          />
+        <template #default="{ results: { hits } }">
+          <div class="row justify-center q-gutter-md">
+            <span v-for="val in hits" :key="val.id" class="col-3">
+              {{ row }}
+              <q-card class="advantages fit">
+                <q-card-section>
+                  <div class="text-h6">{{ $t(val.title) }}</div>
+                  <div class="text-subtitle2">{{ $t(val.formattedAddress) }}</div>
+                </q-card-section>
+                <q-card-actions align="right">
+                  <q-btn color="primary" outline flat>{{ $t('more') }}</q-btn>
+                </q-card-actions>
+              </q-card>
+            </span>
+          </div>
         </template>
       </ais-state-results>
     </ais-instant-search>
@@ -43,48 +42,6 @@ export default {
       )
     };
   },
-  computed:
-      {
-        grid()
-        {
-          return this.$q.platform.is.mobile;
-        },
-        columns()
-        {
-          return [
-            {
-              name: 'date',
-              align: 'left',
-              label: this.$t('date'),
-              field: 'createdAt',
-              sortable: false
-            },
-            {
-              name: 'title',
-              required: true,
-              label: this.$t('job_title'),
-              align: 'left',
-              field: row => row.title,
-              format: val => `${val}`,
-              sortable: false
-            },
-            {
-              name: 'location',
-              align: 'left',
-              label: this.$t('location'),
-              field: 'formattedAddress',
-              sortable: false
-            },
-            {
-              name: 'company',
-              align: 'left',
-              label: this.$t('company'),
-              field: 'organization',
-              sortable: false
-            }
-          ];
-        },
-      },
 };
 </script>
 
