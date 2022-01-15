@@ -1,6 +1,11 @@
 <template>
   <q-page>
     <h1>{{ $t('sightly-different-jobboard') }}</h1>
+    <div class="row justify-center" style="margin: 20px 20px 50px 20px;">
+      <q-input class="col-2" type="text" outlined :label="$t('what')" />
+      <q-input class="col-2" type="text" outlined :label="$t('where')" />
+      <q-btn class="col-2" color="primary" :label="$t('submit')" />
+    </div>
     <SearchSection />
     <Advantages />
     <HappyCustomers />
