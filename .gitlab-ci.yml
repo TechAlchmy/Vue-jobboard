@@ -7,8 +7,8 @@ pages:
   stage: deploy
   image: node:lts-slim
   script:
-    - env | ( grep ROUTER_BASE || echo "ROUTER_BASE=/${CI_PAGES_URL#*://*/}/" )  > .env.local
-    - env | ( grep ALGOLIA || echo -n "" )  >> .env.local
+    - env | ( grep YAWIK_VUE_ROUTER_BASE || echo "ROUTER_BASE=/${CI_PAGES_URL#*://*/}/" ) | grep YAWIK_ | cut -d_ -f2 > .env.local
+    - env | ( grep YAWIK_ || echo -n "" ) | grep YAWIK_ | grep -v YAWIK_VUE_ROUTER_BASE | cut -d_ -f2 >> .env.local
     - yarn
     - yarn build
     - mkdir .public
