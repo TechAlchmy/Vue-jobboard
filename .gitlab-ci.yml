@@ -10,6 +10,7 @@ pages:
     - env | ( grep YAWIK_VUE_ROUTER_BASE || echo "ROUTER_BASE=/${CI_PAGES_URL#*://*/}/" ) | grep YAWIK_ | cut -d_ -f2,2,3 > .env
     - env | ( grep YAWIK_ || echo -n "" ) | grep YAWIK_ALGOLIA | grep -v YAWIK_VUE_ROUTER_BASE | cut -d_ -f2,3 >> .env
     - env | ( grep YAWIK_ || echo -n "" ) | grep YAWIK_ | grep -v YAWIK_VUE_ROUTER_BASE | grep -v YAWIK_ALGOLIA >> .env
+    - cat .env | grep BACKG
     - yarn
     - yarn build
     - mkdir .public
