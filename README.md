@@ -1,20 +1,27 @@
-# Quasar App (job-portal)
+# Yawik Jobboard
 
-A Quasar Framework app
+The Yawik job board is a portal for job advertisements and serves as an example of a Quasar app that can be used as a job board. Posting job ads is free of charge.
 
-## Install the dependencies
+## Install
 ```bash
+git clone git@gitlab.com:yawik/job-portal.git
+cd job-portal
 yarn
 ```
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 ```bash
-quasar dev
+yarn dev
 ```
 
 ### Lint the files
 ```bash
-yarn run lint
+yarn lint
+```
+to fix lint errors
+
+```bash
+yarn lintfix
 ```
 
 ### Build the app for production
@@ -22,5 +29,7 @@ yarn run lint
 quasar build
 ```
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+### Customize
+
+the app is .env aware
+

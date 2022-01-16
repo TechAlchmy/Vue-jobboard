@@ -24,6 +24,23 @@
         <SwitchLanguage />
         <q-btn outline class="shadow-2" color="white" type="a" href="https://jobwizard.yawik.org" :label="$t('create-job')" />
       </q-toolbar>
+
+      <q-carousel v-if="$route.path === '/'" v-model="slide" class="full-width" animated height="50vh">
+        <q-carousel-slide
+          name="first"
+          :img-src="background"
+          class="text-white"
+        >
+          <div class="absolute-center text-center">
+            <div class="claim">{{ $t('sightly-different-jobboard') }}</div>
+          </div>
+          <div class="row justify-center" style="margin: 20px 20px 50px 20px;">
+            <q-input class="col-2" type="text" outlined :label="$t('what')" />
+            <q-input class="col-2" type="text" outlined :label="$t('where')" />
+            <q-btn class="col-2" color="primary" :label="$t('submit')" to="jobs" />
+          </div>
+        </q-carousel-slide>
+      </q-carousel>
     </q-header>
 
     <q-footer bordered class="bg-white text-primary">
@@ -102,10 +119,11 @@ export default defineComponent({
 
   setup()
   {
-    const leftDrawerOpen = ref(false);
     useMeta(metaData);
+    const leftDrawerOpen = ref(false);
 
     return {
+      slide: 'first',
       leftDrawerOpen,
       toggleLeftDrawer()
       {
@@ -145,8 +163,12 @@ export default defineComponent({
         },
       ];
       return linksList;
+    },
+    background()
+    {
+      return process.env.YAWIK_BACKGROUND;
     }
-  }
+  },
 });
 
 </script>
