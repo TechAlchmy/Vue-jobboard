@@ -89,27 +89,6 @@ const metaData = {
   }
 };
 
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'yawik',
-    icon: 'school',
-    link: 'https://jobwizard.yawik.org/docs'
-  },
-  {
-    title: 'Gitlab',
-    caption: 'gitlab.com/yawik/job-portal',
-    icon: 'code',
-    link: 'https://gitlab.com/yawik/job-portal'
-  },
-  {
-    title: 'Bewerbungsformulare',
-    caption: 'Bewerbungen strukturiert per Mail',
-    icon: 'favorite',
-    link: 'https://form.yawik.org'
-  }
-];
-
 import { defineComponent, ref } from 'vue';
 import SwitchLanguage from 'src/components/SwitchLanguage.vue';
 
@@ -124,17 +103,49 @@ export default defineComponent({
   setup()
   {
     const leftDrawerOpen = ref(false);
-
     useMeta(metaData);
 
     return {
-      essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer()
       {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       }
     };
+  },
+  computed:
+  {
+    essentialLinks()
+    {
+      const linksList = [
+
+        {
+          title: this.$t('form_title'),
+          caption: this.$t('form_caption'),
+          icon: 'favorite',
+          link: 'https://form.yawik.org'
+        },
+        {
+          title: this.$t('jobs_title'),
+          caption: this.$t('jobs_caption'),
+          icon: 'favorite',
+          link: 'https://jobwizard.yawik.org'
+        },
+        {
+          title: this.$t('docs'),
+          caption: 'yawik',
+          icon: 'school',
+          link: 'https://jobwizard.yawik.org/docs'
+        },
+        {
+          title: this.$t('src_title'),
+          caption: this.$t('src_caption'),
+          icon: 'code',
+          link: 'https://gitlab.com/yawik/job-portal'
+        },
+      ];
+      return linksList;
+    }
   }
 });
 
@@ -146,13 +157,27 @@ export default defineComponent({
     "job-portal": "Job portal",
     "jobs": "Jobs",
     "create-job": "Create Job",
-    "infos-for-applicant": "Candidate information"
+    "infos-for-applicant": "Candidate information",
+    "jobs_title": "Ad management",
+    "jobs_caption": "Create, manage and publish jobs",
+    "form_title": "Application forms",
+    "form_caption": "Structured applications by mail",
+    "docs": "Documentation",
+    "src_title": "Open Source",
+    "src_caption": "Sources located at Gitlab"
   },
   "de": {
     "job-portal": "Stellenbörse",
     "create-job": "Stellenanzeige erstellen",
     "jobs": "Stellenanzeigen",
-    "infos-for-applicant": "Bewerberinformatinen"
+    "infos-for-applicant": "Bewerberinformatinen",
+    "jobs_title": "Anzeigenverwaltung",
+    "jobs_caption": "Stellenanzeigen anlegen, verwalten und veröffentlichen",
+    "form_title": "Bewerbungsformulare",
+    "form_caption": "Bewerbungen strukturiert per Mail",
+    "docs": "Dokumentation",
+    "src_title": "Open Source",
+    "src_caption": "Quellen auf Gitlab"
   }
 }
 </i18n>
