@@ -31,5 +31,17 @@ quasar build
 
 ### Customize
 
-the app is .env aware
+The jobboard is .env-aware. All possible values are locatewd in `.env`. 
+Values in `.env.local` overwrite those in `.env`
+
+| Name                         | Value                               | 
+|------------------------------|-------------------------------------|
+| ALGOLIA_NAME                 | <your algolia name>                 |
+| ALGOLIA_KEY                  | <your algolia key>                  |
+| YAWIK_BACKGROUND             | Background Image on Startpage       |
+| YAWIK_URL_OPERATOR           | Links to the opeartor of the form   |
+| YAWIK_URL_IMPRINT            | Link to the Imprint of the operator |
+| YAWIK_URL_PRIVACY            | Link to the Privacy notes           |
+
+
 

@@ -54,14 +54,13 @@
 
     <q-drawer
       v-model="leftDrawerOpen"
-      show-if-above
       bordered
     >
       <q-list>
         <q-item-label
           header
         >
-          {{ $t('Essential Links') }}
+          {{ $t('differently_because') }}
         </q-item-label>
 
         <EssentialLink
@@ -168,7 +167,7 @@ export default defineComponent({
     {
       return process.env.YAWIK_BACKGROUND;
     }
-  },
+  }
 });
 
 </script>
@@ -186,7 +185,9 @@ export default defineComponent({
     "form_caption": "Structured applications by mail",
     "docs": "Documentation",
     "src_title": "Open Source",
-    "src_caption": "Sources located at Gitlab"
+    "src_caption": "Sources located at Gitlab",
+    "sightly-different-jobboard": "a slightly different job board ...",
+    "differenetly_because": "differently, because ..."
   },
   "de": {
     "job-portal": "Stellenbörse",
@@ -199,7 +200,9 @@ export default defineComponent({
     "form_caption": "Bewerbungen strukturiert per Mail",
     "docs": "Dokumentation",
     "src_title": "Open Source",
-    "src_caption": "Quellen auf Gitlab"
+    "src_caption": "Quellen auf Gitlab",
+    "sightly-different-jobboard": "eine etwas andere Stellenbörse ...",
+    "differenetly_because": "anders, weil ..."
   }
 }
 </i18n>
