@@ -20,7 +20,6 @@
           </q-item>
 
           <q-card-section>
-            <q-icon style="font-size: 40px; width: 100px;" :name="val.logo" />
             <div class="text-h6">{{ val.title }}</div>
             <div class="text-subtitle2">{{ val.subtitle }}</div>
           </q-card-section>

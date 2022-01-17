@@ -24,6 +24,10 @@
           <highlights :title="$t('highlights')" />
         </q-tab-panel>
 
+        <q-tab-panel name="highlights">
+          <highlights :title="$t('highlights')" />
+        </q-tab-panel>
+
         <q-tab-panel name="industries">
           <industries :title="$t('industries')" />
         </q-tab-panel>
@@ -54,7 +58,7 @@ export default {
     highlights,
     industries,
     companies,
-    cities
+    cities,
   },
   setup()
   {
