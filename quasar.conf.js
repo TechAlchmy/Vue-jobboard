@@ -29,6 +29,7 @@ module.exports = configure(function(ctx)
     boot: [
       'i18n',
       'axios',
+      'gdpr',
       {
         path: 'algolia',
         server: false
@@ -150,7 +151,10 @@ module.exports = configure(function(ctx)
       // directives: [],
 
       // Quasar plugins
-      plugins: ['Meta']
+      plugins: [
+        'Meta',
+        'Notify'
+      ]
     },
 
     // animations: 'all', // --- includes all animations
