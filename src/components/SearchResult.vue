@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-center" align="center">
+  <div class="row justify-center highlights" align="center">
     <div class="text-h6">{{ $t('hightlights') }}</div>
     <ais-instant-search
       :search-client="searchClient"
@@ -83,13 +83,22 @@ export default {
 };
 </script>
 
+<style lang="scss">
+
+.highlights
+{
+  background-color: $secondary;
+}
+
+</style>
+
 <i18n>
 {
-  'en': {
-    'search-placeholder': 'Job title, Company or Location',
+  "en": {
+    "search-placeholder": "Job title, Company or Location",
   },
-  'de': {
-    'search-placeholder': 'Anzeigentitel, Firma oder Ort',
+  "de": {
+    "search-placeholder": "Anzeigentitel, Firma oder Ort",
   }
 }
 </i18n>

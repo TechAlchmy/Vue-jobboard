@@ -9,7 +9,7 @@
         <template #default="{ results: { hits } }">
           <div class="row justify-center q-gutter-md">
             <span v-for="val in hits" :key="val.id" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-              <q-card class="advantages fit">
+              <q-card class="jobs fit">
                 <q-card-section>
                   <q-item>
                     <q-item-section avatar>
@@ -56,7 +56,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 
 body
 {
@@ -68,6 +68,11 @@ body
 .ais-InstantSearch
 {
   width: 100%;
+}
+
+.jobs
+{
+  background-color: $primary-light;
 }
 
 </style>

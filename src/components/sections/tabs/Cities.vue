@@ -1,7 +1,7 @@
 <template>
   <div class="row q-gutter-md justify-center" align="center">
     <div class="text-h6 full-width">{{ $t('cities') }}</div>
-    <span v-for="val in data" :key="val.name" class="col-3">
+    <span v-for="val in data" :key="val.name" class="col-md-3 col-sm-6 col-xs-12">
       <q-card class="q-py-md-md">
         <q-item>
           <q-item-section avatar>

@@ -38,7 +38,7 @@ export default {
 
 .advantages
 {
-  background-color: var(--secondary);
+  background-color: $secondary-light;
 }
 
 .icon

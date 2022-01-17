@@ -31,8 +31,7 @@
           </q-card-section>
 
           <q-card-actions align="right">
-            <q-btn flat>1</q-btn>
-            <q-btn flat>2</q-btn>
+            <q-btn flat>{{ $t('more') }}</q-btn>
           </q-card-actions>
         </q-card>
       </span>

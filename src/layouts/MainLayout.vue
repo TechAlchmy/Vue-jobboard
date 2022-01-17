@@ -140,19 +140,19 @@ export default defineComponent({
         {
           title: this.$t('form_title'),
           caption: this.$t('form_caption'),
-          icon: 'favorite',
+          icon: 'feed',
           link: 'https://form.yawik.org'
         },
         {
           title: this.$t('jobs_title'),
           caption: this.$t('jobs_caption'),
-          icon: 'favorite',
+          icon: 'view_list',
           link: 'https://jobwizard.yawik.org'
         },
         {
           title: this.$t('docs'),
           caption: 'yawik',
-          icon: 'school',
+          icon: 'auto_stories',
           link: 'https://jobwizard.yawik.org/docs'
         },
         {
@@ -172,6 +172,15 @@ export default defineComponent({
 });
 
 </script>
+
+<style lang="scss">
+
+.claim
+{
+  font-size: 3em;
+}
+
+</style>
 
 <i18n>
 {

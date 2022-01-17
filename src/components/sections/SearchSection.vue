@@ -7,12 +7,14 @@
         outside-arrows
         mobile-arrows
         no-caps
+        active-color="primary"
+        indicator-color="secondary"
         class="full-width"
       >
-        <q-tab name="highlights" icon="mdi-party-popper" :label="$t('hightlights')" />
-        <q-tab name="industries" icon="mdi-factory" :label="$t('industries')" />
-        <q-tab name="cities" icon="mdi-map-marker" :label="$t('cities')" />
-        <q-tab name="companies" icon="mdi-domain" :label="$t('companies')" />
+        <q-tab class="col-md-2" name="highlights" icon="mdi-party-popper" :label="$t('hightlights')" />
+        <q-tab class="col-md-2" name="industries" icon="mdi-factory" :label="$t('industries')" />
+        <q-tab class="col-md-2" name="cities" icon="location_city" :label="$t('cities')" />
+        <q-tab class="col-md-2" name="companies" icon="mdi-domain" :label="$t('companies')" />
       </q-tabs>
 
       <q-separator />
