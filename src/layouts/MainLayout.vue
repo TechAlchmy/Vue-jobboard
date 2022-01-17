@@ -11,8 +11,8 @@
           @click="toggleLeftDrawer"
         />
         <q-toolbar-title class="logo">
-          <q-btn no-caps flat icon="img:../../yawik_logo-mobile.svg" to="/">
-            {{ '&nbsp;' + $t('job portal') }}
+          <q-btn no-caps flat :icon="$q.config.logo" to="/">
+            {{ '&nbsp;' + $q.config.sitename }}
           </q-btn>
         </q-toolbar-title>
         <q-separator dark vertical />
@@ -22,6 +22,7 @@
         <q-separator dark vertical />
         <q-space />
         <SwitchLanguage />
+        &nbsp;
         <q-btn outline class="shadow-2" color="white" type="a" href="https://jobwizard.yawik.org" :label="$t('create-job')" />
       </q-toolbar>
 
@@ -34,10 +35,10 @@
           <div class="absolute-center text-center">
             <div class="claim">{{ $t('sightly-different-jobboard') }}</div>
           </div>
-          <div class="row justify-center" style="margin: 20px 20px 50px 20px;">
-            <q-input class="col-2" type="text" outlined :label="$t('what')" />
-            <q-input class="col-2" type="text" outlined :label="$t('where')" />
-            <q-btn class="col-2" color="primary" :label="$t('submit')" to="jobs" />
+          <div class="row justify-center" style="padding: 30px; margin: 20px 20px 50px 20px;">
+            <q-input bg-color="white" class="z-top col-md-4 col-xs-6" type="text" outlined :label="$t('what')" />
+            <q-input bg-color="white" class="z-top col-md-4 col-xs-6" type="text" outlined :label="$t('where')" />
+            <q-btn class="col-md-2 col-xs-12" color="primary" no-caps :label="$t('search')" to="jobs" />
           </div>
         </q-carousel-slide>
       </q-carousel>
@@ -175,7 +176,8 @@ export default defineComponent({
 <i18n>
 {
   "en": {
-    "job-portal": "Job portal",
+    "jobboard": "Job portal",
+    "search": "find jobs",
     "jobs": "Jobs",
     "create-job": "Create Job",
     "infos-for-applicant": "Candidate information",
@@ -187,10 +189,13 @@ export default defineComponent({
     "src_title": "Open Source",
     "src_caption": "Sources located at Gitlab",
     "sightly-different-jobboard": "a slightly different job board ...",
-    "differenetly_because": "differently, because ..."
+    "differently_because": "differently, because ..."
   },
   "de": {
-    "job-portal": "Stellenbörse",
+    "jobboard": "Stellenbörse",
+    "search": "Jobs finden",
+    "what": "was suchen sie?",
+    "where": "wo suchen sie?",
     "create-job": "Stellenanzeige erstellen",
     "jobs": "Stellenanzeigen",
     "infos-for-applicant": "Bewerberinformatinen",
@@ -202,7 +207,7 @@ export default defineComponent({
     "src_title": "Open Source",
     "src_caption": "Quellen auf Gitlab",
     "sightly-different-jobboard": "eine etwas andere Stellenbörse ...",
-    "differenetly_because": "anders, weil ..."
+    "differently_because": "anders, weil ..."
   }
 }
 </i18n>

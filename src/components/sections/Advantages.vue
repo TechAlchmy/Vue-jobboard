@@ -38,7 +38,17 @@ export default {
 
 .advantages
 {
-  background-color: #EEE;
+  background-color: var(--secondary);
+}
+
+.icon
+{
+  transition: transform 0.7s ease-in-out;
+}
+
+.icon:hover
+{
+  transform: rotateY(180deg);
 }
 
 </style>

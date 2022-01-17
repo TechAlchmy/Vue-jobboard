@@ -9,10 +9,11 @@
 /* eslint-env node */
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const path = require('path');
-const ESLintPlugin = require('eslint-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin');
 const { configure } = require('quasar/wrappers');
 
-module.exports = configure(function (ctx) {
+module.exports = configure(function(ctx)
+{
   const variables = require('dotenv-flow').config().parsed;
 
   return {
@@ -28,7 +29,10 @@ module.exports = configure(function (ctx) {
     boot: [
       'i18n',
       'axios',
-      {path: 'algolia', server: false},
+      {
+        path: 'algolia',
+        server: false
+      },
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -56,7 +60,7 @@ module.exports = configure(function (ctx) {
       vueRouterMode: variables.ROUTER_MODE || 'history', // available values: 'hash', 'history'
       devtool: ctx.dev ? 'inline-source-map' : false,
       env:
-        { 
+        {
           ...variables,
         },
 
@@ -130,7 +134,10 @@ module.exports = configure(function (ctx) {
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
-      config: {},
+      config: {
+        sitename: 'jobboard',
+        logo: 'img:../../yawik_logo-mobile.svg'
+      },
 
       // iconSet: 'material-icons', // Quasar icon set
       lang: 'de', // Quasar language pack
@@ -158,14 +165,15 @@ module.exports = configure(function (ctx) {
       // manualPostHydrationTrigger: true,
 
       prodPort: 3000, // The default port that the production server should use
-                      // (gets superseded if process.env.PORT is specified at runtime)
+      // (gets superseded if process.env.PORT is specified at runtime)
 
       maxAge: 1000 * 60 * 60 * 24 * 30,
-        // Tell browser when a file from the server should expire from cache (in ms)
+      // Tell browser when a file from the server should expire from cache (in ms)
 
-      chainWebpackWebserver (chain) {
+      chainWebpackWebserver(chain)
+      {
         chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
+          .use(ESLintPlugin, [{ extensions: ['js'] }]);
       },
 
       middlewares: [
@@ -181,15 +189,16 @@ module.exports = configure(function (ctx) {
 
       // for the custom service worker ONLY (/src-pwa/custom-service-worker.[js|ts])
       // if using workbox in InjectManifest mode
-      chainWebpackCustomSW (chain) {
+      chainWebpackCustomSW(chain)
+      {
         chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
+          .use(ESLintPlugin, [{ extensions: ['js'] }]);
       },
 
       manifest: {
-        name: `Quasar App`,
-        short_name: `Quasar App`,
-        description: `A Quasar Framework app`,
+        name: `Yawik Jobboard`,
+        short_name: `Jobboard`,
+        description: `Open Source Jobbord based on quasar`,
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
@@ -258,16 +267,18 @@ module.exports = configure(function (ctx) {
       },
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
-      chainWebpackMain (chain) {
+      chainWebpackMain(chain)
+      {
         chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
+          .use(ESLintPlugin, [{ extensions: ['js'] }]);
       },
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
-      chainWebpackPreload (chain) {
+      chainWebpackPreload(chain)
+      {
         chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
+          .use(ESLintPlugin, [{ extensions: ['js'] }]);
       },
     }
-  }
+  };
 });

@@ -41,7 +41,7 @@
     },
     {
         "name": "Finanz",
-        "icon": "mdi-bank",
+        "icon": "account_balance",
         "url": "http://finanz-jobs.de"
     },
     {
@@ -56,7 +56,7 @@
     },
     {
         "name": "Hotel",
-        "icon": "mdi-bed",
+        "icon": "hotel",
         "url": "http://hot-jobs.net"
     },
     {

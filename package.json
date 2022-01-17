@@ -1,8 +1,8 @@
 {
-  "name": "job-portal",
+  "name": "jobboard",
   "version": "0.0.1",
-  "description": "A Quasar Framework app",
-  "productName": "Quasar App",
+  "description": "Open Source Jobboard based on the Quasar framework",
+  "productName": "Yawik Jobboard",
   "author": "Carsten Bleek <bleek@cross-solution.de>",
   "private": true,
   "scripts": {
