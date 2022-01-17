@@ -1,11 +1,13 @@
 # Yawik Jobboard
 
-The Yawik job board is a portal for job advertisements and serves as an example of a Quasar app that can be used as a job board. Posting job ads is free of charge.
+The Yawik Jobboard is a portal for job advertisements and serves as an example of a Quasar app that can be used as a job board. 
+
+All job advertisements are "real". Posting ads is free of charge. All ads placed are manually checked and activated.
 
 ## Install
 ```bash
-git clone git@gitlab.com:yawik/job-portal.git
-cd job-portal
+git clone git@gitlab.com:yawik/jobbord.git
+cd jobboard
 yarn
 ```
 
@@ -36,9 +38,10 @@ Values in `.env.local` overwrite those in `.env`
 
 | Name                         | Value                               | 
 |------------------------------|-------------------------------------|
-| ALGOLIA_NAME                 | <your algolia name>                 |
-| ALGOLIA_KEY                  | <your algolia key>                  |
+| ALGOLIA_NAME                 | your algolia name                   |
+| ALGOLIA_KEY                  | your algolia key                    |
 | YAWIK_BACKGROUND             | Background Image on Startpage       |
+| YAWIK_EXTERNAL_JOBS          | https://yawik.org/demo/de/jobboard  |
 | YAWIK_URL_OPERATOR           | Links to the opeartor of the form   |
 | YAWIK_URL_IMPRINT            | Link to the Imprint of the operator |
 | YAWIK_URL_PRIVACY            | Link to the Privacy notes           |

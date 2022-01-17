@@ -159,7 +159,7 @@ export default defineComponent({
           title: this.$t('src_title'),
           caption: this.$t('src_caption'),
           icon: 'code',
-          link: 'https://gitlab.com/yawik/job-portal'
+          link: 'https://gitlab.com/yawik/jobboard'
         },
       ];
       return linksList;
