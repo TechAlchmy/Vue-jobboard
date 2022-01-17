@@ -2,7 +2,7 @@
   <div align="center">
     <h2>{{ $t('happy-customers') }}</h2>
     <div class="row justify-center q-gutter-md">
-      <span v-for="val in data" :key="val.name" class="col-3">
+      <span v-for="val in data" :key="val.name" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <q-card class="customers fit">
           <q-item>
             <q-item-section avatar>
@@ -12,14 +12,15 @@
             </q-item-section>
 
             <q-item-section>
-              <q-item-label>{{ val.title }}</q-item-label>
-              <q-item-label caption>
+              <q-item-label align="left">{{ val.title }}</q-item-label>
+              <q-item-label align="left" caption>
                 {{ val.subtitle }}
               </q-item-label>
             </q-item-section>
           </q-item>
-          <img :src="val.logo">
-          <q-card-section class="bg-primary text-white">
+
+          <q-card-section>
+            <q-icon style="font-size: 40px; width: 100px;" :name="val.logo" />
             <div class="text-h6">{{ val.title }}</div>
             <div class="text-subtitle2">{{ val.subtitle }}</div>
           </q-card-section>

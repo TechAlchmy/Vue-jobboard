@@ -2,7 +2,7 @@
   <div align="center">
     <h2>{{ $t('news-and-topics') }}</h2>
     <div class="row q-gutter-md justify-center">
-      <span v-for="val in data" :key="val.name" class="col-3">
+      <span v-for="val in data" :key="val.name" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <q-card class="customers">
           <img :src="val.image">
           <q-card-section class="bg-secondary text-white">

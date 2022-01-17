@@ -7,7 +7,7 @@
         outside-arrows
         mobile-arrows
         no-caps
-        class="full-width bg-primary text-white"
+        class="full-width"
       >
         <q-tab name="highlights" icon="mdi-party-popper" :label="$t('hightlights')" />
         <q-tab name="industries" icon="mdi-factory" :label="$t('industries')" />
