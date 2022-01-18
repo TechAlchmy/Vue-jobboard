@@ -19,11 +19,6 @@
             </q-item-section>
           </q-item>
 
-          <q-card-section>
-            <div class="text-h6">{{ val.title }}</div>
-            <div class="text-subtitle2">{{ val.subtitle }}</div>
-          </q-card-section>
-
           <q-separator />
           <q-card-section>
             <div>{{ val.description }}</div>
