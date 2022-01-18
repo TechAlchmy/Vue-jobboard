@@ -7,21 +7,35 @@
 
 <script>
 import { QMarkdown } from '@quasar/quasar-ui-qmarkdown';
-import markdown from './test.md';
+//import markdown from './test.md';
 
 export default {
-  name: 'News20220111',
+  name: 'News',
   components: {
     QMarkdown
   },
   data()
   {
     return {
-      markdown: markdown,
+      markdown: null,
       toc: []
     };
   },
   computed: {},
+  mounted()
+  {
+    const fileName = this.$route.params.filename + '.md';
+    import('./' + fileName).then(m =>
+    {
+      const data = m.default;
+      const subStr = data.substring(
+        data.indexOf('^') + 1,
+        data.lastIndexOf('^')
+      );
+      const description = data.replace(subStr, '').replace('^^', '');
+      this.markdown = description;
+    });
+  },
   methods: {
     onToc(toc)
     {
