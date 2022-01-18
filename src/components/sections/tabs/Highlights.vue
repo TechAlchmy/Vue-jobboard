@@ -13,10 +13,13 @@
                 <q-card-section>
                   <q-item>
                     <q-item-section avatar>
-                      <q-img fit="contain" :src="'https://api.yawik.org' + val.logo" width="50px" />
+                      <q-img fit="contain" :src="jobHost + val.logo" width="50px" />
+                      <q-item-label align="left" caption>{{ diff(today,val.createdAt) }} {{ $t('days') }}</q-item-label>
                     </q-item-section>
                     <q-item-section>
-                      <q-item-label align="left">{{ val.title }}</q-item-label>
+                      <q-item-label align="left">
+                        <q-btn align="left" flat type="a" no-caps :href="jobHost + val.url" :label="val.title" />
+                      </q-item-label>
                       <q-item-label align="left" caption>
                         {{ val.organization }}
                       </q-item-label>
@@ -31,15 +34,18 @@
                 <q-card-section>
                   <q-item>
                     <q-item-section avatar>
-                      <q-img fit="contain" :src="val.organizationLogo" width="50px" />
+                      <q-img fit="contain" :src="val.organizationLogo" width="100px" height="50px" />
+                      <q-item-label align="left" caption>{{ diff(today,new Date(val.dateStart)) }} {{ $t('days') }}</q-item-label>
                     </q-item-section>
 
                     <q-item-section>
-                      <q-item-label align="left">{{ val.title }}</q-item-label>
+                      <q-item-label align="left">
+                        <q-btn align="left" no-caps disable flat :label="val.title" />
+                      </q-item-label>
                       <q-item-label align="left" caption>
                         {{ val.organization }}
                       </q-item-label>
-                      <q-item-label align="left" caption>{{ val.formattedAddress }}</q-item-label>
+                      <q-item-label align="left" caption>{{ val.location }}</q-item-label>
                     </q-item-section>
                   </q-item>
                 </q-card-section>
@@ -55,6 +61,9 @@
 <script>
 
 import algoliasearch from 'algoliasearch/lite';
+import { date } from 'quasar';
+// destructuring to keep only what is needed
+const { getDateDiff } = date;
 
 export default {
   name: 'Highlights',
@@ -84,13 +93,23 @@ export default {
         rowsPerPage: 9,
         rowsNumber: 10
       },
-      data: []
+      data: [],
+      today: new Date()
     };
   },
-  computed: {
+  computed:
+  {
     host()
     {
       return process.env.YAWIK_EXTERNAL_JOBS;
+    },
+    jobHost()
+    {
+      return process.env.YAWIK_JOB_URL;
+    },
+    diff()
+    {
+      return getDateDiff;
     }
   },
   mounted()
@@ -218,11 +237,13 @@ body
 {
   "en": {
     "search-placeholder": "Job title, Company or Location",
-    "first-ad": "Place your first ad! Free of charge."
+    "first-ad": "Place your first ad! Free of charge.",
+    "days": "days",
   },
   "de": {
     "search-placeholder": "Anzeigentitel, Firma oder Ort",
-    "first-ad": "Schalten sie ihre erste Anzeige! Kostenlos."
+    "first-ad": "Schalten sie ihre erste Anzeige! Kostenlos.",
+    "days": "Tage"
   }
 }
 </i18n>
