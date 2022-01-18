@@ -11,14 +11,20 @@
             <span v-for="val in hits" :key="val.id" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
               <q-card class="jobs fit">
                 <q-card-section>
-                  <q-item>
+                  <q-item
+                    clickable
+                    tag="a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    :href="jobHost + val.url"
+                  >
                     <q-item-section avatar>
-                      <q-img fit="contain" :src="jobHost + val.logo" width="50px" />
+                      <q-img fit="contain" :src="jobHost + val.logo" height="50px" width="100px" />
                       <q-item-label align="left" caption>{{ diff(today,val.createdAt) }} {{ $t('days') }}</q-item-label>
                     </q-item-section>
                     <q-item-section>
                       <q-item-label align="left">
-                        <q-btn align="left" flat type="a" no-caps :href="jobHost + val.url" :label="val.title" />
+                        {{ val.title }}
                       </q-item-label>
                       <q-item-label align="left" caption>
                         {{ val.organization }}
@@ -32,7 +38,10 @@
             <span v-for="val in data" :key="val.id" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
               <q-card class="jobs fit">
                 <q-card-section>
-                  <q-item>
+                  <q-item
+                    clickable
+                    disable
+                  >
                     <q-item-section avatar>
                       <q-img fit="contain" :src="val.organizationLogo" width="100px" height="50px" />
                       <q-item-label align="left" caption>{{ diff(today,new Date(val.dateStart)) }} {{ $t('days') }}</q-item-label>
@@ -40,7 +49,7 @@
 
                     <q-item-section>
                       <q-item-label align="left">
-                        <q-btn align="left" no-caps disable flat :label="val.title" />
+                        {{ val.title }}
                       </q-item-label>
                       <q-item-label align="left" caption>
                         {{ val.organization }}

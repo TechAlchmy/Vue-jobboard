@@ -21,15 +21,15 @@
 
       <q-tab-panels v-model="tab" animated>
         <q-tab-panel name="highlights">
-          <highlights :title="$t('highlights')" />
+          <highlights />
         </q-tab-panel>
 
         <q-tab-panel name="highlights">
-          <highlights :title="$t('highlights')" />
+          <highlights />
         </q-tab-panel>
 
         <q-tab-panel name="industries">
-          <industries :title="$t('industries')" />
+          <industries />
         </q-tab-panel>
 
         <q-tab-panel name="cities">
