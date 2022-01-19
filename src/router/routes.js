@@ -1,4 +1,3 @@
-
 const routes = [
   {
     path: '/',
@@ -21,7 +20,14 @@ const routes = [
       {
         path: '2022-01-11',
         name: '2022-01-11',
-        component: () => import('pages/news/News20220111.vue'),
+        component: () => import('pages/news/News.vue'),
+      },
+      {
+        path: 'news/:filename',
+        name: 'news',
+        props: true,
+        component: () => import('pages/news/News.vue'),
+
       },
 
     ]
