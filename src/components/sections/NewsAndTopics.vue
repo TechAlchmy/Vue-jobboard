@@ -4,20 +4,21 @@
     <div class="row q-gutter-md justify-center">
       <span v-for="(val,index) in files" :key="index" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <q-card class="customers cursor-pointer" @click="route(val.date)">
-          <img :src="val.image">
-          <q-card-section class="bg-secondary text-white">
-            <div class="text-h6">{{ val.title }}</div>
-            <div class="text-subtitle2">{{ val.category }}</div>
-          </q-card-section>
-
+          <q-img fit="cover" :src="val.image" height="200px">
+            <div class="absolute-bottom text-subtitle2 text-left">
+              <div>{{ val.title }}</div>
+            </div>
+          </q-img>
           <q-separator />
           <q-card-section>
             <div>{{ val.teaser }}</div>
           </q-card-section>
-
-          <q-card-actions align="right">
+          <q-card-actions>
+            <q-badget color="red">{{ val.category }}</q-badget>
+            <q-space />
             <q-btn flat>{{ val.date }}</q-btn>
           </q-card-actions>
+
         </q-card>
       </span>
     </div>
