@@ -2,17 +2,17 @@
   <div align="center">
     <h2>{{ $t('news-and-topics') }}</h2>
     <div class="row q-gutter-md justify-center">
-      <span v-for="(val,index) in files" :key="index" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <span v-for="(val,index) in metas" :key="index" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <q-card class="customers cursor-pointer" @click="route(val.date)">
           <img :src="val.image">
           <q-card-section class="bg-secondary text-white">
             <div class="text-h6">{{ val.title }}</div>
-            <div class="text-subtitle2">{{ val.category }}</div>
+            <div class="text-subtitle2">{{ val.cat }}</div>
           </q-card-section>
 
-          <q-separator />
+          <q-separator/>
           <q-card-section>
-            <div>{{ val.teaser }}</div>
+            <div>{{ val.desc }}</div>
           </q-card-section>
 
           <q-card-actions align="right">
@@ -25,81 +25,84 @@
 </template>
 
 <script>
-//import data from 'src/assets/news-and-topics.json';
+  //import data from 'src/assets/news-and-topics.json';
+  import frontMatter from 'front-matter';
 
-export default {
-  name: 'NewsAndTopics',
-  data()
-  {
-    return {
-      files: []
-    };
-  },
-  computed:
-      {
-      },
-  watch: {
-    files()
-    {
-    }
-  },
-  mounted()
-  {
-    const illustrations = require.context(
-      '../../pages/news',
-      false,
-      /^(?!.*test.md)((.*\.(md\.*))[^.]*$)/
-      ///^.*\.md$/
-    );
-
-    const arr = illustrations.keys();
-    const records = arr.slice(Math.max(arr.length - 6, 0)).reverse();
-
-    records.forEach(fileName =>
-    {
-      const data = illustrations(fileName).default;
-      let description = this.getSubStr(data, '^', '^', 1);
-      console.log('desc1 ' + description);
-      description = data.replace(description, '').replace('^^', '');
-      console.log('desc ' + description);
-      const file = {
-        title: this.getSubStr(data, '&&', '&&'),
-        description: description,
-        teaser: description.substring(1, 128),
-        category: this.getSubStr(data, '@@', '@@'),
-        image: this.getSubStr(data, '$$', '$$'),
-        date: this.getDateFromFileName(fileName)
+  export default {
+    name: 'NewsAndTopics',
+    data() {
+      return {
+        metas: []
       };
-      this.files.push(file);
-      console.log(file);
-    });
-    console.log(this.files);
-  },
-  methods:
+    },
+    computed:
+      {},
+    watch: {
+      files() {
+      }
+    },
+    mounted() {
+      const illustrations = require.context(
+        '../../pages/news',
+        false,
+        /^(?!.*test.md)((.*\.(md\.*))[^.]*$)/
+        ///^.*\.md$/
+      );
+
+      const arr = illustrations.keys();
+      const records = arr.slice(Math.max(arr.length - 6, 0)).reverse();
+
+      records.forEach(fileName => {
+        const data = illustrations(fileName).default;
+        let content = frontMatter(data)
+        let attributes = content.attributes;
+        attributes.date = this.getDateFromFileName(fileName);
+        this.metas.push(content.attributes)
+
+        // const str = this.getSubStr(data, '---', '---', 3)
+
+        //  var firstLine = str.split('\n')[0];
+
+
+        /* let description = this.getSubStr(data, '^', '^', 1);
+         console.log('desc1 ' + description);
+         description = data.replace(description, '').replace('^^', '');
+         console.log('desc ' + description);
+         const file = {
+           title: this.getSubStr(data, '&&', '&&'),
+           description: description,
+           teaser: description.substring(1, 128),
+           category: this.getSubStr(data, '@@', '@@'),
+           image: this.getSubStr(data, '$$', '$$'),
+           date: this.getDateFromFileName(fileName)
+         };
+         this.files.push(file);
+         console.log(file);*/
+      });
+      console.log(this.metas);
+    },
+    methods:
       {
-        route(filename)
-        {
+        route(filename) {
           this.$router.push({
             name: 'news',
-            params: { filename: filename }
+            params: {filename: filename}
           });
           /*  this.$router.push({
               name: route,
             });*/
         },
-        getDateFromFileName(fileName)
-        {
+        getDateFromFileName(fileName) {
           return fileName.replace('./', '').replace('.md', '');
         },
-        getSubStr(str, start, end, index = 2)
-        {
+        getSubStr(str, start, end, index = 2) {
           return str.substring(
             str.indexOf(start) + index,
             str.lastIndexOf(end)
           );
         }
       }
-};
+  };
 </script>
 
 <i18n>
