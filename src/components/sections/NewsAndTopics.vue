@@ -10,7 +10,7 @@
             <div class="text-subtitle2">{{ val.cat }}</div>
           </q-card-section>
 
-          <q-separator/>
+          <q-separator />
           <q-card-section>
             <div>{{ val.desc }}</div>
           </q-card-section>
@@ -25,46 +25,49 @@
 </template>
 
 <script>
-  //import data from 'src/assets/news-and-topics.json';
-  import frontMatter from 'front-matter';
+//import data from 'src/assets/news-and-topics.json';
+import frontMatter from 'front-matter';
 
-  export default {
-    name: 'NewsAndTopics',
-    data() {
-      return {
-        metas: []
-      };
-    },
-    computed:
+export default {
+  name: 'NewsAndTopics',
+  data()
+  {
+    return {
+      metas: []
+    };
+  },
+  computed:
       {},
-    watch: {
-      files() {
-      }
-    },
-    mounted() {
-      const illustrations = require.context(
-        '../../pages/news',
-        false,
-        /^(?!.*test.md)((.*\.(md\.*))[^.]*$)/
-        ///^.*\.md$/
-      );
+  watch: {
+    files()
+    {
+    }
+  },
+  mounted()
+  {
+    const illustrations = require.context(
+      '../../pages/news',
+      false,
+      /^(?!.*test.md)((.*\.(md\.*))[^.]*$)/
+      ///^.*\.md$/
+    );
 
-      const arr = illustrations.keys();
-      const records = arr.slice(Math.max(arr.length - 6, 0)).reverse();
+    const arr = illustrations.keys();
+    const records = arr.slice(Math.max(arr.length - 6, 0)).reverse();
 
-      records.forEach(fileName => {
-        const data = illustrations(fileName).default;
-        let content = frontMatter(data)
-        let attributes = content.attributes;
-        attributes.date = this.getDateFromFileName(fileName);
-        this.metas.push(content.attributes)
+    records.forEach(fileName =>
+    {
+      const data = illustrations(fileName).default;
+      const content = frontMatter(data);
+      const attributes = content.attributes;
+      attributes.date = this.getDateFromFileName(fileName);
+      this.metas.push(content.attributes);
 
-        // const str = this.getSubStr(data, '---', '---', 3)
+      // const str = this.getSubStr(data, '---', '---', 3)
 
-        //  var firstLine = str.split('\n')[0];
+      //  var firstLine = str.split('\n')[0];
 
-
-        /* let description = this.getSubStr(data, '^', '^', 1);
+      /* let description = this.getSubStr(data, '^', '^', 1);
          console.log('desc1 ' + description);
          description = data.replace(description, '').replace('^^', '');
          console.log('desc ' + description);
@@ -78,31 +81,34 @@
          };
          this.files.push(file);
          console.log(file);*/
-      });
-      console.log(this.metas);
-    },
-    methods:
+    });
+    console.log(this.metas);
+  },
+  methods:
       {
-        route(filename) {
+        route(filename)
+        {
           this.$router.push({
             name: 'news',
-            params: {filename: filename}
+            params: { filename: filename }
           });
           /*  this.$router.push({
               name: route,
             });*/
         },
-        getDateFromFileName(fileName) {
+        getDateFromFileName(fileName)
+        {
           return fileName.replace('./', '').replace('.md', '');
         },
-        getSubStr(str, start, end, index = 2) {
+        getSubStr(str, start, end, index = 2)
+        {
           return str.substring(
             str.indexOf(start) + index,
             str.lastIndexOf(end)
           );
         }
       }
-  };
+};
 </script>
 
 <i18n>
