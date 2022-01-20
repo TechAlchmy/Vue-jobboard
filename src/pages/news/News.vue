@@ -7,7 +7,8 @@
 
 <script>
 import { QMarkdown } from '@quasar/quasar-ui-qmarkdown';
-//import markdown from './test.md';
+//import markdown from './2022-01-18.md';
+import frontMatter from 'front-matter';
 
 export default {
   name: 'News',
@@ -28,12 +29,13 @@ export default {
     import('./' + fileName).then(m =>
     {
       const data = m.default;
-      const subStr = data.substring(
-        data.indexOf('^') + 1,
-        data.lastIndexOf('^')
-      );
-      const description = data.replace(subStr, '').replace('^^', '');
-      this.markdown = description;
+
+      /* const subStr = data.substring(
+           data.indexOf('^') + 1,
+           data.lastIndexOf('^')
+         );
+         const description = data.replace(subStr, '').replace('^^', '');*/
+      this.markdown = frontMatter(data).body;
     });
   },
   methods: {
