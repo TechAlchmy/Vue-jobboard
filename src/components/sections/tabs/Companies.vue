@@ -12,7 +12,7 @@
         </q-card-section>
         <q-separator />
         <q-card-actions align="right">
-          <q-btn no-caps flat>{{ $t('jobs') }}</q-btn>
+          <q-btn disable no-caps flat>{{ $t('jobs') }}</q-btn>
           <q-btn icon="mdi-wikipedia" type="a" :href="val.wikipedia" flat />
         </q-card-actions>
       </q-card>

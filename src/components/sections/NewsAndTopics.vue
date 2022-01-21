@@ -27,7 +27,9 @@
 <script>
 import frontMatter from 'front-matter';
 
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'NewsAndTopics',
   data()
   {
@@ -64,7 +66,7 @@ export default {
       attributes.filename = this.getDateFromFileName(fileName);
       this.metas.push(content.attributes);
     });
-    console.log(this.metas);
+    console.log('Meta', this.metas);
   },
   methods:
       {
@@ -87,7 +89,7 @@ export default {
           );
         }
       }
-};
+});
 </script>
 
 <i18n>
