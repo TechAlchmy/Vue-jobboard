@@ -21,18 +21,38 @@
 </template>
 
 <script>
-import { SET_LANG, SET_SETTINGS } from '../store/names';
-import { mapMutations } from 'vuex';
+import { GET_SETTINGS, SET_SETTINGS } from '../store/names';
+import { mapMutations, mapGetters } from 'vuex';
+import { useQuasar } from 'quasar';
 
 export default {
   name: 'SwitchLanguage',
+  computed:
+  {
+    ...mapGetters([GET_SETTINGS]),
+    defaultLanguage()
+    {
+      console.log(this[GET_SETTINGS]);
+      return this[GET_SETTINGS].defaultLanguage;
+    }
+  },
+  created()
+  {
+    const $q = useQuasar();
+    let lang = $q.lang.getLocale() === 'de' ? 'de' : 'en';
+    console.log('Lang:', this[GET_SETTINGS]);
+    if (this[GET_SETTINGS])
+    {
+      lang = this[GET_SETTINGS].defaultLanguage;
+    }
+    this.$root.$i18n.locale = lang;
+  },
   methods:
       {
-        ...mapMutations([SET_LANG, SET_SETTINGS]),
+        ...mapMutations([SET_SETTINGS]),
         setLocale(lang)
         {
           this.$root.$i18n.locale = lang;
-          this[SET_LANG](lang); // should be removed. We only need default Language
           this[SET_SETTINGS]({ defaultLanguage: lang });
 
           import(

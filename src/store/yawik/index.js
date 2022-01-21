@@ -1,8 +1,6 @@
 import {
   GET_SETTINGS,
-  GET_LANG,
-  SET_SETTINGS,
-  SET_LANG
+  SET_SETTINGS
 } from '../names';
 
 const userSettings = {
@@ -35,17 +33,9 @@ export default
       {
         return state.settings;
       },
-      [GET_LANG](state)
-      {
-        return state.lang;
-      },
     },
   mutations:
     {
-      [SET_LANG](state, value)
-      {
-        state.lang = value;
-      },
       [SET_SETTINGS](state, obj)
       {
         state.settings[Object.keys(obj)[0]] = Object.values(obj)[0];

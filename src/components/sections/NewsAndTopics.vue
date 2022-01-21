@@ -14,7 +14,7 @@
             <div>{{ val.desc }}</div>
           </q-card-section>
           <q-card-actions>
-            <q-badget color="red">{{ val.cat }}</q-badget>
+            <q-badge color="secondary">{{ val.cat }}</q-badge>
             <q-space />
             <q-btn flat>{{ new Date(val.date).toLocaleString($root.$i18n.locale) }}</q-btn>
           </q-card-actions>
@@ -54,7 +54,7 @@ export default {
     );
 
     const arr = illustrations.keys();
-    const records = arr.slice(Math.max(arr.length - 10, 0)).reverse();
+    const records = arr.slice(Math.max(arr.length - 6, 0)).reverse();
 
     records.forEach(fileName =>
     {

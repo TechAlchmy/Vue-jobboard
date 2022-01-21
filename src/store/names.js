@@ -7,8 +7,6 @@ We use constants in Vuex for several reasons:
 
 // getters
 export const GET_SETTINGS = 'GET_SETTINGS';
-export const GET_LANG = 'GET_LANG';
 
 // mutations
 export const SET_SETTINGS = 'SET_SETTINGS';
-export const SET_LANG = 'SET_LANG';
