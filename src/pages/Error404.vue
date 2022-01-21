@@ -32,11 +32,11 @@ export default defineComponent({
 
 <i18n>
 {
-  'en': {
-    'file-not-found': 'Ops... file not found.',
+  "en": {
+    "file-not-found": "Ops... file not found.",
   },
-  'de': {
-    'file-not-found': 'Upps... Datei nicht gefunden.',
+  "de": {
+    "file-not-found": "Upps... Datei nicht gefunden.",
   }
 }
 </i18n>

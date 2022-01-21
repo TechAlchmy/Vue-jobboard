@@ -3,7 +3,7 @@
     <h2>{{ $t('news-and-topics') }}</h2>
     <div class="row q-gutter-md justify-center">
       <span v-for="(val,index) in metas" :key="index" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-        <q-card class="customers cursor-pointer" @click="route(val.date)">
+        <q-card class="customers cursor-pointer" @click="route(val.filename)">
           <q-img fit="cover" :src="val.image" height="200px">
             <div class="absolute-bottom text-subtitle2 text-left">
               <div>{{ val.title }}</div>
@@ -16,7 +16,7 @@
           <q-card-actions>
             <q-badget color="red">{{ val.cat }}</q-badget>
             <q-space />
-            <q-btn flat>{{ val.date }}</q-btn>
+            <q-btn flat>{{ new Date(val.date).toLocaleString($root.$i18n.locale) }}</q-btn>
           </q-card-actions>
         </q-card>
       </span>
@@ -25,7 +25,6 @@
 </template>
 
 <script>
-//import data from 'src/assets/news-and-topics.json';
 import frontMatter from 'front-matter';
 
 export default {
@@ -37,7 +36,9 @@ export default {
     };
   },
   computed:
-      {},
+      {
+
+      },
   watch: {
     files()
     {
@@ -47,40 +48,21 @@ export default {
   {
     const illustrations = require.context(
       '../../pages/news',
-      false,
-      /^(?!.*test.md)((.*\.(md\.*))[^.]*$)/
-      ///^.*\.md$/
+      true, // subdirectories
+      //      /((.*\.(md\.*))[^.]*$)/
+      /^.*\.md$/
     );
 
     const arr = illustrations.keys();
-    const records = arr.slice(Math.max(arr.length - 6, 0)).reverse();
+    const records = arr.slice(Math.max(arr.length - 10, 0)).reverse();
 
     records.forEach(fileName =>
     {
       const data = illustrations(fileName).default;
       const content = frontMatter(data);
       const attributes = content.attributes;
-      attributes.date = this.getDateFromFileName(fileName);
+      attributes.filename = this.getDateFromFileName(fileName);
       this.metas.push(content.attributes);
-
-      // const str = this.getSubStr(data, '---', '---', 3)
-
-      //  var firstLine = str.split('\n')[0];
-
-      /* let description = this.getSubStr(data, '^', '^', 1);
-         console.log('desc1 ' + description);
-         description = data.replace(description, '').replace('^^', '');
-         console.log('desc ' + description);
-         const file = {
-           title: this.getSubStr(data, '&&', '&&'),
-           description: description,
-           teaser: description.substring(1, 128),
-           category: this.getSubStr(data, '@@', '@@'),
-           image: this.getSubStr(data, '$$', '$$'),
-           date: this.getDateFromFileName(fileName)
-         };
-         this.files.push(file);
-         console.log(file);*/
     });
     console.log(this.metas);
   },
@@ -92,9 +74,6 @@ export default {
             name: 'news',
             params: { filename: filename }
           });
-          /*  this.$router.push({
-              name: route,
-            });*/
         },
         getDateFromFileName(fileName)
         {
@@ -112,12 +91,16 @@ export default {
 </script>
 
 <i18n>
+{
+  "en":
   {
-  "en": {
-  "news-and-topics": "News & Topics",
+    "news-and-topics": "News & Topics",
+    "day_ago": "days ago"
   },
-  "de": {
-  "news-and-topics": "Aktuelles & Themen",
+  "de":
+  {
+    "news-and-topics": "Aktuelles & Themen",
+    "days_ago": "vor Tagen"
   }
-  }
+}
 </i18n>

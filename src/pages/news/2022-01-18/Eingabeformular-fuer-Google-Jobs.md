@@ -2,6 +2,7 @@
 title: Eingabeformular für Google Jobs,
 desc: Einfach eine Stellenanzeige in einem Formular eingeben und Bewerber über Google Jobs bekommen. Kostenlos und Open Source,
 cat: Live Style,
+date: 2022-01-18
 image: https://images.unsplash.com/photo-1605703485610-c1b12c4c18ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc5fHxmcmFua2Z1cnR8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60
 ---
 
