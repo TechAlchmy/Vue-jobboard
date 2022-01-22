@@ -1,18 +1,17 @@
 <template>
   <q-page padding>
-    <h1>{{ $t('jobs') }}</h1>
+    <h4>{{ $t('jobs') }}</h4>
     <q-splitter
       v-model="splitterModel"
-      style="height: 400px;"
+      before-class="bg-secondary-light"
+      style="height: 95%;"
     >
       <template #before>
         <searchresult @click="getEmittedData" />
       </template>
 
       <template #after>
-        <div class="q-pa-md">
-          <jobdetail :selected-job="selectedJob" />
-        </div>
+        <jobdetail :selected-job="selectedJob" />
       </template>
     </q-splitter>
     <!-- content -->
