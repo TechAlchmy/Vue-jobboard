@@ -18,16 +18,10 @@ const routes = [
         component: () => import('pages/Info.vue'),
       },
       {
-        path: '2022-01-11',
-        name: '2022-01-11',
-        component: () => import('pages/news/News.vue'),
-      },
-      {
-        path: 'news/:filename',
+        path: 'news/:date/:title',
         name: 'news',
         props: true,
         component: () => import('pages/news/News.vue'),
-
       },
 
     ]

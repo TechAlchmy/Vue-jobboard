@@ -3,7 +3,6 @@
     <h4>{{ $t('jobs') }}</h4>
     <q-splitter
       v-model="splitterModel"
-      before-class="bg-secondary-light"
       style="height: 95%;"
     >
       <template #before>
@@ -15,8 +14,6 @@
       </template>
     </q-splitter>
     <!-- content -->
-    {{ grid }}
-    {{ columns }}
   </q-page>
 </template>
 

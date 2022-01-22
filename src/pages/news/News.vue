@@ -74,8 +74,8 @@ export default defineComponent({
   mounted()
   {
     console.log(this.$route.params);
-    const fileName = this.$route.params.filename + '.md';
-    import('./' + fileName).then(m =>
+    const fileName = this.$route.params.date + '/' + this.$route.params.title;
+    import('./' + fileName + '.md').then(m =>
     {
       const data = m.default;
       const content = frontMatter(data);

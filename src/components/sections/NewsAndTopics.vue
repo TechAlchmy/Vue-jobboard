@@ -72,9 +72,13 @@ export default defineComponent({
       {
         route(filename)
         {
+          const matches = filename.match(/(.*)\/(.*)/);
           this.$router.push({
             name: 'news',
-            params: { filename: filename }
+            params: {
+              date: matches[1],
+              title: matches[2]
+            }
           });
         },
         getDateFromFileName(fileName)
