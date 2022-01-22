@@ -121,11 +121,11 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
   .highlights
   {
-    background-color: $secondary;
+    background-color: $secondary-light;
   }
 
 </style>

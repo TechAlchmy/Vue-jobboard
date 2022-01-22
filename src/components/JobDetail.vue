@@ -1,6 +1,6 @@
 <template>
   <div v-if="selectedJob!=null" class="row">
-    <div class="q-pa-md">
+    <div class="col-12 q-pa-md text-center">
       <q-btn rounded size="xl" color="secondary">{{ $t('apply') }} </q-btn>
     </div>
     <div class="col-12">
@@ -66,14 +66,6 @@ export default defineComponent({
   {
     return {
       jobDetailUrl: `${process.env.YAWIK_JOB_URL}`,
-      loading: false,
-      pagination: {
-        sortBy: 'desc',
-        descending: true,
-        rowsNumber: 10,
-        page: 1,
-        rowsPerPage: 10
-      },
     };
   },
   props: {
@@ -83,12 +75,6 @@ export default defineComponent({
       default: null
     }
   },
-  data()
-  {
-    return {
-      rows: []
-    };
-  },
   watch: {
     selectedJob(newVal, oldVal)
     {
@@ -97,28 +83,10 @@ export default defineComponent({
   },
   mounted()
   {
-    this.getJob();
   },
   methods:
-      {
-        getJob(data = {})
-        {
-          this.loading = true;
-          this.$axios.get(this.jobsUrl, {
-            params: {
-              populate: 'html,logo',
-              sort: 'publishedAt:desc'
-            }
-          }
-          ).then(response =>
-          {
-            this.rows = response.data.data;
-          }).finally(() =>
-          {
-            this.loading = false;
-          });
-        },
-      }
+  {
+  }
 });
 </script>
 
@@ -130,18 +98,18 @@ export default defineComponent({
 </style>
 
 <i18n>
-  {
+{
   "en": {
-  "search-placeholder": "Job title, Company or Location",
-  "job-title": "Job title",
-  "address": "Address",
-  "apply": "Apply"
+    "search-placeholder": "Job title, Company or Location",
+    "job-title": "Job title",
+    "address": "Address",
+    "apply": "Apply"
   },
   "de": {
-  "search-placeholder": "Anzeigentitel, Firma oder Ort",
-  "job-title": "Job title",
-  "address": "Address",
-  "apply": "Bewerben"
+    "search-placeholder": "Anzeigentitel, Firma oder Ort",
+    "job-title": "Job title",
+    "address": "Address",
+    "apply": "Bewerben"
   }
-  }
+}
 </i18n>
