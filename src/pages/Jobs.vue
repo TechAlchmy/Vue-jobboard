@@ -1,21 +1,56 @@
 <template>
   <q-page padding>
-    <h1>{{ $t('jobs') }}</h1>
+    <h4>{{ $t('jobs') }}</h4>
+    <q-splitter
+      v-model="splitterModel"
+      before-class="bg-secondary-light"
+      style="height: 95%;"
+    >
+      <template #before>
+        <searchresult @click="getEmittedData" />
+      </template>
+
+      <template #after>
+        <jobdetail :selected-job="selectedJob" />
+      </template>
+    </q-splitter>
     <!-- content -->
-    <searchresult />
     {{ grid }}
     {{ columns }}
   </q-page>
 </template>
 
 <script>
-import searchresult from 'src/components/SearchResult.vue';
+import searchresult from 'src/components/SearchResultSplitted.vue';
+import jobdetail from 'src/components/JobDetail.vue';
+import { ref } from 'vue';
 
 export default {
   name: 'Jobs',
-  components:
+  setup()
   {
-    searchresult
+    return {
+      splitterModel: ref(25), // start at 50%
+    };
   },
+  components:
+      {
+        searchresult,
+        jobdetail
+      },
+  data()
+  {
+    return {
+      selectedJob: null,
+    };
+  },
+  methods:
+      {
+        getEmittedData(value)
+        {
+          this.selectedJob = value.job;
+        }
+      },
+
 };
 </script>
