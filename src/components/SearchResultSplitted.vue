@@ -1,15 +1,20 @@
 <template>
   <div class="row">
-    <span v-for="val in rows" :key="val.id" class="col-12">
+    <span v-for="(val, index) in rows" :key="val.id" class="col-12">
       <q-card class="jobs fit">
         <q-card-section>
           <q-item
+            :class="index==selectedIndex?'highlights':''"
             clickable
-            @click="emitData"
+            @click="emitData(val, index)"
           >
             <q-item-section avatar>
-              <q-img fit="contain" :src="jobHost + val.attributes.logo.formats.thumbnail.url" height="50px" width="100px" />
-              <q-item-label align="left" caption>{{ diff(today,val.attributes.createdAt) }} {{ $t('days') }}</q-item-label>
+              <q-img fit="contain" :src="jobHost + val.attributes.logo.formats.thumbnail.url" height="50px"
+                     width="100px"
+              />
+              <q-item-label align="left"
+                            caption
+              >{{ diff(today,val.attributes.createdAt) }} {{ $t('days') }}</q-item-label>
             </q-item-section>
             <q-item-section>
               <q-item-label align="left">
@@ -39,8 +44,8 @@ export default defineComponent({
   setup()
   {
     return {
-      jobsUrl: `${process.env.YAWIK_API_URL}/api/jobs`,
-      jobDetailUrl: `${process.env.YAWIK_JOB_URL}`,
+      jobsUrl: `${process.env.YAWIK_STRAPI_URL}/api/jobs`,
+      jobDetailUrl: `${process.env.YAWIK_STRAPI_URL}`,
       loading: false,
       rowsPerPageOptions: [10, 25, 50, 100],
       pagination: {
@@ -56,76 +61,82 @@ export default defineComponent({
   data()
   {
     return {
-      rows: []
+      rows: [],
+      selectedIndex: null
     };
   },
   computed:
-  {
-    jobHost()
-    {
-      return process.env.YAWIK_JOB_URL;
-    },
-    diff()
-    {
-      return getDateDiff;
-    }
-  },
+      {
+        jobHost()
+        {
+          return process.env.YAWIK_JOB_URL;
+        },
+        diff()
+        {
+          return getDateDiff;
+        }
+      },
   mounted()
   {
     this.getJobs();
   },
   methods:
-  {
-    getJobs(pagination = { pagination: this.pagination })
-    {
-      this.loading = true;
-      this.$axios.get(this.jobsUrl, {
-        params: {
-          'pagination[page]': pagination.pagination.page,
-          'pagination[pageSize]': pagination.pagination.rowsPerPage,
-          populate: 'html,logo',
-          sort: 'publishedAt:desc'
+      {
+        getJobs(pagination = { pagination: this.pagination })
+        {
+          this.loading = true;
+          this.$axios.get(this.jobsUrl, {
+            params: {
+              'pagination[page]': pagination.pagination.page,
+              'pagination[pageSize]': pagination.pagination.rowsPerPage,
+              populate: 'html,logo',
+              sort: 'publishedAt:desc'
+            }
+          }
+          ).then(response =>
+          {
+            this.rows = response.data.data;
+            this.setPagination(response.data.meta.pagination);
+          }).finally(() =>
+          {
+            this.loading = false;
+          });
+        },
+        setPagination(pagination)
+        {
+          this.pagination = {
+            sortBy: 'asc',
+            descending: true,
+            rowsNumber: pagination.total,
+            page: pagination.page,
+            rowsPerPage: pagination.pageSize
+          };
+        },
+        emitData(job, index)
+        {
+          this.selectedIndex = index;
+          this.$emit('click', { job: job });
         }
       }
-      ).then(response =>
-      {
-        this.rows = response.data.data;
-        this.setPagination(response.data.meta.pagination);
-      }).finally(() =>
-      {
-        this.loading = false;
-      });
-    },
-    setPagination(pagination)
-    {
-      this.pagination = {
-        sortBy: 'asc',
-        descending: true,
-        rowsNumber: pagination.total,
-        page: pagination.page,
-        rowsPerPage: pagination.pageSize
-      };
-    },
-  }
 });
 </script>
 
 <style lang="scss">
 
-.highlights
-{
-  background-color: $secondary;
-}
+  .highlights
+  {
+    background-color: $secondary;
+  }
 
 </style>
 
 <i18n>
-{
+  {
   "en": {
-    "search-placeholder": "Job title, Company or Location",
+  "search-placeholder": "Job title, Company or Location",
   },
   "de": {
-    "search-placeholder": "Anzeigentitel, Firma oder Ort",
+  "search-placeholder": "Anzeigentitel, Firma oder Ort",
   }
-}
+  }
 </i18n>

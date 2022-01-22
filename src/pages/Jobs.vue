@@ -6,12 +6,12 @@
       style="height: 400px;"
     >
       <template #before>
-        <searchresult />
+        <searchresult @click="getEmittedData" />
       </template>
 
       <template #after>
         <div class="q-pa-md">
-          <jobdetail />
+          <jobdetail :selected-job="selectedJob" />
         </div>
       </template>
     </q-splitter>
@@ -31,13 +31,27 @@ export default {
   setup()
   {
     return {
-      splitterModel: ref(25) // start at 50%
+      splitterModel: ref(25), // start at 50%
     };
   },
   components:
+      {
+        searchresult,
+        jobdetail
+      },
+  data()
   {
-    searchresult,
-    jobdetail
+    return {
+      selectedJob: null,
+    };
   },
+  methods:
+      {
+        getEmittedData(value)
+        {
+          this.selectedJob = value.job;
+        }
+      },
+
 };
 </script>
