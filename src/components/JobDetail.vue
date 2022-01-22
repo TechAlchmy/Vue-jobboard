@@ -22,32 +22,37 @@
           <q-item>
             <q-item-section>
               <q-item-label>{{ selectedJob.attributes.introLabel }}</q-item-label>
-              <q-item-label caption>{{ selectedJob.attributes.intro }}</q-item-label>
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <q-item-label caption v-html="selectedJob.attributes.intro" />
               <h2>{{ selectedJob.attributes.jobTitle }}</h2>
             </q-item-section>
           </q-item>
           <q-item>
             <q-item-section>
               <q-item-label>{{ selectedJob.attributes.taskLabel }}</q-item-label>
-              <q-item-label caption>{{ selectedJob.attributes.tasks }}</q-item-label>
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <q-item-label caption v-html="selectedJob.attributes.tasks" />
             </q-item-section>
           </q-item>
           <q-item>
             <q-item-section>
               <q-item-label>{{ selectedJob.attributes.profileLabel }}</q-item-label>
-              <q-item-label caption>{{ selectedJob.attributes.profile }}</q-item-label>
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <q-item-label caption v-html="selectedJob.attributes.profile" />
             </q-item-section>
           </q-item>
           <q-item>
             <q-item-section>
               <q-item-label>{{ selectedJob.attributes.offerLabel }}</q-item-label>
-              <q-item-label caption>{{ selectedJob.attributes.offer }}</q-item-label>
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <q-item-label caption v-html="selectedJob.attributes.offer" />
             </q-item-section>
           </q-item>
           <q-item>
             <q-item-section>
               <q-item-label>{{ selectedJob.attributes.contactInfoLabel }}</q-item-label>
-              <q-item-label caption>{{ selectedJob.attributes.contactInfo }}</q-item-label>
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <q-item-label caption v-html="selectedJob.attributes.contactInfo" />
             </q-item-section>
           </q-item>
         </q-card>
@@ -58,14 +63,55 @@
 
 <script>
 
-import { defineComponent } from 'vue';
+import { useMeta } from 'quasar';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'JobDetail',
   setup()
   {
+    const title = ref('yawik jobboard');
+    const description = ref('yawik jobboard');
+    const keywords = ref('yawik jobboard');
+
+    // NOTICE the parameter here is a function
+    // Under the hood, it is converted to a Vue computed prop for reactivity
+    useMeta(() =>
+    {
+      return {
+        // whenever "title" from above changes, your meta will automatically update
+        title: title.value,
+        titleTemplate: title => `${title} - Yawik News`,
+        meta: {
+          description: {
+            name: 'description',
+            content: description.value
+          },
+          keywords: {
+            name: 'keywords',
+            content: keywords.value
+          },
+        }
+      };
+    });
+
+    function pageTitle(val)
+    {
+      title.value = val; // will automatically trigger a Meta update due to the binding
+    }
+    function pageKeywords(val)
+    {
+      title.value = val; // will automatically trigger a Meta update due to the binding
+    }
+    function pageDescription(val)
+    {
+      title.value = val; // will automatically trigger a Meta update due to the binding
+    }
     return {
       jobDetailUrl: `${process.env.YAWIK_JOB_URL}`,
+      pageTitle,
+      pageDescription,
+      pageKeywords
     };
   },
   props: {
@@ -79,6 +125,7 @@ export default defineComponent({
     selectedJob(newVal, oldVal)
     {
       console.log('Val changed');
+      this.pageTitle(newVal.attributes.jobTitle);
     }
   },
   mounted()
