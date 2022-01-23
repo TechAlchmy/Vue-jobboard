@@ -13,6 +13,12 @@ const routes = [
         component: () => import('pages/Jobs.vue'),
       },
       {
+        path: 'jobs/:id/:title',
+        name: 'selected-job',
+        props: true,
+        component: () => import('pages/Jobs.vue'),
+      },
+      {
         path: 'info',
         name: 'info',
         component: () => import('pages/Info.vue'),
