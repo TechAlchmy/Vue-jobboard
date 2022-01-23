@@ -44,8 +44,8 @@ export default defineComponent({
   setup()
   {
     return {
-      jobsUrl: `${process.env.YAWIK_STRAPI_URL}/api/jobs`,
-      jobDetailUrl: `${process.env.YAWIK_STRAPI_URL}`,
+      jobsUrl: `${process.env.YAWIK_JOB_URL}/api/jobs`,
+      jobDetailUrl: `${process.env.YAWIK_JOB_URL}`,
       loading: false,
       rowsPerPageOptions: [10, 25, 50, 100],
       pagination: {
