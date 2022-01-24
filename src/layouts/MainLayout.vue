@@ -187,6 +187,8 @@ export default defineComponent({
   "en": {
     "jobboard": "Job portal",
     "search": "find jobs",
+    "what": "what are you looking for?",
+    "where": "where do you search?",
     "jobs": "Jobs",
     "create-job": "Create Job",
     "infos-for-applicant": "Candidate information",
@@ -198,7 +200,7 @@ export default defineComponent({
     "src_title": "Open Source",
     "src_caption": "Sources located at Gitlab",
     "sightly-different-jobboard": "a slightly different job board ...",
-    "differently_because": "differently, because ..."
+    "differently_because": "differently, because it's 100% open source."
   },
   "de": {
     "jobboard": "Stellenbörse",
@@ -216,7 +218,25 @@ export default defineComponent({
     "src_title": "Open Source",
     "src_caption": "Quellen auf Gitlab",
     "sightly-different-jobboard": "eine etwas andere Stellenbörse ...",
-    "differently_because": "anders, weil ..."
+    "differently_because": "anders, weil es 100% open source ist."
+  },
+  "fr": {
+    "jobboard": "Bourse d'emploi",
+    "search": "Trouver des jobs",
+    "what": "que cherchez-vous ?",
+    "where": "où cherchez-vous ?",
+    "create-job": "Créer une offre d'emploi",
+    "jobs": "Offres d'emploi",
+    "infos-for-applicant": "Informations sur le candidat",
+    "jobs_title": "Gestion des annonces",
+    "jobs_caption": "Créer, gérer et publier des offres d'emploi",
+    "form_title": "Formulaires de candidature",
+    "form_caption": "Candidatures structurées par e-mail",
+    "docs": "Documentation",
+    "src_title": "Open Source",
+    "src_caption": "Les sources sur Gitlab",
+    "sightly-different-jobboard": "une bourse de l'emploi un peu différente ...",
+    "differently_because": "différent, car il est 100% open source."
   }
 }
 </i18n>
