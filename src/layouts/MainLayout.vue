@@ -16,7 +16,7 @@
           </q-btn>
         </q-toolbar-title>
         <q-separator dark vertical />
-        <q-btn no-caps stretch flat :label="$t('jobs')" to="jobs" />
+        <q-btn no-caps stretch flat :label="$t('jobs')" to="/jobs" />
         <q-separator dark vertical />
         <q-btn no-caps stretch flat :label="$t('infos-for-applicant')" to="info" />
         <q-separator dark vertical />

@@ -44,8 +44,8 @@ export default defineComponent({
   setup()
   {
     return {
-      jobsUrl: `${process.env.YAWIK_API_URL}/api/jobs`,
-      jobDetailUrl: `${process.env.YAWIK_API_URL}`,
+      jobsUrl: `${process.env.YAWIK_JOB_URL}/api/jobs`,
+      jobDetailUrl: `${process.env.YAWIK_JOB_URL}`,
       loading: false,
       rowsPerPageOptions: [10, 25, 50, 100],
       pagination: {
@@ -97,6 +97,12 @@ export default defineComponent({
           {
             this.rows = response.data.data;
             this.setPagination(response.data.meta.pagination);
+            const selectedId = parseInt(this.$route.params.id);
+            const index = this.rows.findIndex(({ id }) => id === selectedId);
+            if (index !== -1)
+            {
+              this.emitData(this.rows[index], index);
+            }
           }).finally(() =>
           {
             this.loading = false;
@@ -112,8 +118,17 @@ export default defineComponent({
             rowsPerPage: pagination.pageSize
           };
         },
+        convertToSlug(title)
+        {
+          return title.toLowerCase()
+            .replace(/[^\w ]+/g, '')
+            .replace(/ +/g, '-');
+        },
         emitData(job, index)
         {
+          const id = job.id;
+          const title = this.convertToSlug(job.attributes.jobTitle);
+          window.history.pushState('', 'Title', '/jobs/' + id + '/' + title);
           this.selectedIndex = index;
           this.$emit('click', { job: job });
         }
