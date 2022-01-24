@@ -3,9 +3,9 @@
     <div class="col-12">
       <div class="text-h6">{{ $t('first-ad') }}</div>
     </div>
-    <div class="col-9">
-      <div class="row justify-center">
-        <div v-for="val in rows" :key="val.id" class="col-5 q-ml-sm">
+    <div class="col-12">
+      <div class="row justify-center q-gutter-md">
+        <span v-for="val in rows" :key="val.id" class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
           <q-card class="jobs fit">
             <q-card-section>
               <q-item clickable>
@@ -31,7 +31,32 @@
               </q-item>
             </q-card-section>
           </q-card>
-        </div>
+        </span>
+        <span v-for="val in data" :key="val.id" class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+          <q-card class="jobs fit">
+            <q-card-section>
+              <q-item
+                clickable
+                disable
+              >
+                <q-item-section avatar>
+                  <q-img fit="contain" :src="val.organizationLogo" width="100px" height="50px" />
+                  <q-item-label align="left" caption>{{ diff(today,new Date(val.dateStart)) }} {{ $t('days') }}</q-item-label>
+                </q-item-section>
+
+                <q-item-section>
+                  <q-item-label align="left">
+                    {{ val.title }}
+                  </q-item-label>
+                  <q-item-label align="left" caption>
+                    {{ val.organization }}
+                  </q-item-label>
+                  <q-item-label align="left" caption>{{ val.location }}</q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-card-section>
+          </q-card>
+        </span>
       </div>
     </div>
   </div>
