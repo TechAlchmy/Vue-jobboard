@@ -1,8 +1,8 @@
 <template>
   <div class="row q-gutter-md justify-center" align="center">
     <div class="text-h6 full-width">{{ $t('companies') }}</div>
-    <span v-for="val in data" :key="val.name" class="col-md-3">
-      <q-card class="fit">
+    <span v-for="val in data" :key="val.name" class="col-sm-4 col-md-3 col-lg-2">
+      <q-card class="fit shadow-3">
         <q-card-section>
           <q-img :src="val.logo" fit="contain" img-class="company-logo" height="50px" />
         </q-card-section>
@@ -13,7 +13,7 @@
         <q-separator />
         <q-card-actions align="right">
           <q-btn disable no-caps flat>{{ $t('jobs') }}</q-btn>
-          <q-btn icon="mdi-wikipedia" type="a" :href="val.wikipedia" flat />
+          <q-btn icon="mdi-wikipedia" type="a" :href="val.url" flat />
         </q-card-actions>
       </q-card>
     </span>
