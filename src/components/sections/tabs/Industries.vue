@@ -2,7 +2,10 @@
   <div class="row q-gutter-md justify-center" align="center">
     <div class="text-h6 full-width">{{ $t('industries') }}</div>
     <span v-for="val in data" :key="val.name" class="col-3">
-      <q-btn class="full-width" stack no-caps size="xl" :label="val.name" :icon="val.icon" type="a" :href="val.url" />
+      <q-btn class="full-width shadow-3" stack type="a" no-caps :href="val.url">
+        <q-icon size="xl" :name="val.icon" color="secondary" />
+        <div class="text-primary">{{ val.name }}</div>
+      </q-btn>
     </span>
   </div>
 </template>
