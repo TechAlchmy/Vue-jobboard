@@ -90,7 +90,7 @@ export default {
       data: [],
       today: new Date(),
       rows: [],
-      jobsUrl: `${process.env.YAWIK_STRAPI_URL}/api/jobs`,
+      jobsUrl: `${process.env.YAWIK_API_URL}/api/jobs`,
     };
   },
   computed:
