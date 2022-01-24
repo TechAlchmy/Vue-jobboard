@@ -179,9 +179,9 @@ export default {
         json: '1',
         page: page,
         count: count,
-        q: filter.q,
+        q: 'vue',
         l: filter.l,
-        d: filter.d
+        d: filter.d,
       };
 
       const queryStr = Object.keys(query)
