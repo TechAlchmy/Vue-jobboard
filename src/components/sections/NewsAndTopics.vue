@@ -66,7 +66,6 @@ export default defineComponent({
       attributes.filename = this.getDateFromFileName(fileName);
       this.metas.push(content.attributes);
     });
-    console.log('Meta', this.metas);
   },
   methods:
       {
