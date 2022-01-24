@@ -10,3 +10,5 @@ Release notes (with changelog) for Quasar core packages (`quasar`, `@quasar/cli`
 For all other packages, visit the [Quasar Organization](https://github.com/quasarframework) GitHub page and look for the repository that you are interested in then click on its "Releases".
 
 <TestComponent/>
+
+<q-btn label="test" />
