@@ -5,27 +5,22 @@
       <span v-for="val in data" :key="val.name" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <q-card class="customers fit">
           <q-item>
-            <q-item-section avatar>
-              <q-avatar>
-                <img :src="val.avatar">
-              </q-avatar>
-            </q-item-section>
-
-            <q-item-section>
-              <q-item-label align="left">{{ val.title }}</q-item-label>
-              <q-item-label align="left" caption>
-                {{ val.subtitle }}
-              </q-item-label>
-            </q-item-section>
+            <q-chat-message
+              :name="val.title"
+              :avatar="val.avatar + ', ' + val.subtitle"
+              :text="val.description"
+              size="9"
+              stamp="3 minutes ago"
+              text-color="white"
+              bg-color="primary"
+            />
           </q-item>
 
-          <q-separator />
-          <q-card-section>
-            <div>{{ val.description }}</div>
-          </q-card-section>
-
-          <q-card-actions align="right">
-            <q-btn flat>{{ $t('more') }}</q-btn>
+          <q-card-actions align="center">
+            <q-btn no-caps type="a" :href="val.more" flat>
+              <q-img height="50px" fit="contain" :src="val.logo" />
+              <span>{{ val.company }}</span>
+            </q-btn>
           </q-card-actions>
         </q-card>
       </span>
