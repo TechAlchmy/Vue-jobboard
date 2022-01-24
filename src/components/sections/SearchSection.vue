@@ -92,6 +92,12 @@ body
     "cities": "Städte",
     "industries": "Branchen",
     "highlights": "Highlights",
+  },
+  "fr": {
+    "companies": "grandes entreprises",
+    "cities": "Villes",
+    "industries": "Branches",
+    "highlights": "Points forts",
   }
 }
 </i18n>

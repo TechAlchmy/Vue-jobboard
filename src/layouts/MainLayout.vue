@@ -32,13 +32,11 @@
           :img-src="background"
           class="text-white"
         >
-          <div class="absolute-center text-center">
-            <div class="claim">{{ $t('sightly-different-jobboard') }}</div>
-          </div>
-          <div class="row justify-center" style="padding: 30px; margin: 20px 20px 50px 20px;">
-            <q-input bg-color="white" class="z-top col-md-4 col-xs-6" type="text" outlined :label="$t('what')" />
-            <q-input bg-color="white" class="z-top col-md-4 col-xs-6" type="text" outlined :label="$t('where')" />
-            <q-btn class="col-md-2 col-xs-12" color="primary" no-caps :label="$t('search')" to="jobs" />
+          <div class="absolute-center full-width">
+            <div class="claim text-center">{{ $t('sightly-different-jobboard') }}</div>
+            <div class="full-width justify-center">
+              <searchform />
+            </div>
           </div>
         </q-carousel-slide>
       </q-carousel>
@@ -108,13 +106,15 @@ const metaData = {
 
 import { defineComponent, ref } from 'vue';
 import SwitchLanguage from 'src/components/SwitchLanguage.vue';
+import searchform from 'src/components/SearchForm.vue';
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
     EssentialLink,
-    SwitchLanguage
+    SwitchLanguage,
+    searchform
   },
 
   setup()
@@ -178,6 +178,7 @@ export default defineComponent({
 .claim
 {
   font-size: 3em;
+  margin-bottom: 1em;
 }
 
 </style>

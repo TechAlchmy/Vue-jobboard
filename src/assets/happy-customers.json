@@ -2,25 +2,14 @@
     {
         "title": "Carsten Bleek",
         "subtitle": "Inhaber",
-        "description": "mit dem YAWIK kann man schnell und einfach Stellenanzeigen erstellen und Vakanzen besetzen.",
+        "description": [
+            "mit dem YAWIK kann man schnell und einfach Stellenanzeigen erstellen und Vakanzen besetzen.",
+            "Es gibt noch keine Kunden. Werden sie der erste und sichern sie sich eine kostenlose Stunde Einführung von mir personlich."
+        ],
         "avatar": "https://secure.gravatar.com/avatar/c51d961553bd9e448b0768c401e98e7b?s=180&d=identicon",
         "company": "CROSS Solution",
-        "logo": "img:https://old.cross-solution.de/wp-content/themes/cross/images/logo.gif"
-    },
-    {
-        "title": "Max Mustermann",
-        "subtitle": "Produkt Owner",
-        "description": "lorem-ipsum",
-        "avatar": "https://cdn.quasar.dev/img/boy-avatar.png",
-        "company": "Company ABC AG",
-        "logo": ""
-    },
-    {
-        "title": "Erika Musterfrau",
-        "subtitle": "Leitung HR",
-        "description": "lorem-ipsum",
-        "avatar": "https://cdn.quasar.dev/img/boy-avatar.png",
-        "company": "Next Company DEF Ltd.",
-        "logo": ""
+        "more": "https://cross-solution.de",
+        "logo": "https://old.cross-solution.de/wp-content/themes/cross/images/logo.gif"
     }
+
 ]
