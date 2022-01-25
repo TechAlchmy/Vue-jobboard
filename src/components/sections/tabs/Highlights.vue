@@ -5,7 +5,7 @@
     </div>
     <div class="col-12">
       <div class="row justify-center q-gutter-md">
-        <span v-for="val in rows" :key="val.id" class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+        <span v-for="val in rows" :key="val.id" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
           <q-card class="jobs fit">
             <q-card-section>
               <q-item
@@ -35,7 +35,7 @@
             </q-card-section>
           </q-card>
         </span>
-        <span v-for="val in data" :key="val.id" class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+        <span v-for="val in data" :key="val.id" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
           <q-card class="jobs fit">
             <q-card-section>
               <q-item
@@ -87,7 +87,7 @@ export default {
         sortBy: 'date',
         descending: false,
         page: 1,
-        rowsPerPage: 9,
+        rowsPerPage: 10,
         rowsNumber: 10
       },
       data: [],
