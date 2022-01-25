@@ -1,6 +1,5 @@
 <template>
   <q-page padding>
-    <h1 style="padding: 0; margin: 0;">{{ $t('info') }}</h1>
     <q-markdown :src="markdown" toc @data="onToc" />
   </q-page>
 </template>
@@ -25,7 +24,8 @@ export default {
   },
   mounted()
   {
-    import('./infos/Infos-test.md').then(m =>
+    const fileName = this.$route.params.filename;
+    import('./infos/' + fileName + '.md').then(m =>
     {
       const data = m.default;
       const content = frontMatter(data);

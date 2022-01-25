@@ -1,0 +1,49 @@
+[
+    {
+        "icon": "md5-home",
+        "label": "for-applicants",
+        "items": [
+            {
+                "icon": "home",
+                "label": "find-jobs",
+                "to": "/jobs"
+            },
+            {
+                "icon": "feed",
+                "label": "remembered-jobs",
+                "disable": true
+            }
+        ]
+    },
+    {
+        "icon": "md5-home",
+        "label": "general",
+        "items": [
+            {
+                "icon": "img:../../yawik_logo-mobile.svg",
+                "label": "about-yawik",
+                "to": "/info/about-yawik"
+            },
+            {
+                "icon": "auto_stories",
+                "label": "documentation"
+            }
+        ]
+    },
+    {
+        "icon": "home",
+        "label": "for-companies",
+        "items": [
+            {
+                "icon": "add",
+                "label": "create-jobs",
+                "to": "/info/stellenanzeige-erstellen"
+            },
+            {
+                "icon": "euro",
+                "label": "prices",
+                "to": "/info/prices"
+            }
+        ]
+    }
+]

@@ -1,31 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header reveal elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          :aria-label="$t('menu')"
-          @click="toggleLeftDrawer"
-        />
-        <q-toolbar-title class="logo">
-          <q-btn no-caps flat :icon="$q.config.logo" to="/">
-            {{ '&nbsp;' + $q.config.sitename }}
-          </q-btn>
-        </q-toolbar-title>
-        <q-separator dark vertical />
-        <q-btn no-caps stretch flat :label="$t('jobs')" to="/jobs" />
-        <q-separator dark vertical />
-        <q-btn no-caps stretch flat :label="$t('infos-for-applicant')" to="info" />
-        <q-separator dark vertical />
-        <q-space />
-        <SwitchLanguage />
-        &nbsp;
-        <q-btn outline class="shadow-2" color="white" type="a" href="https://jobwizard.yawik.org" :label="$t('create-job')" />
-      </q-toolbar>
-
+      <toolbar @toggle-drawer="toggleLeftDrawer" />
       <q-carousel v-if="$route.path === '/'" v-model="slide" class="full-width" animated height="50vh">
         <q-carousel-slide
           name="first"
@@ -73,12 +49,26 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+    <q-page-sticky position="bottom-right" class="z-top" :offset="[20, 20]">
+      <q-btn
+        fab
+        icon="add"
+        color="secondary"
+        :label="$t('create-job')"
+        to="/info/stellenanzeige-erstellen"
+      />
+    </q-page-sticky>
   </q-layout>
 </template>
 
 <script>
+
 import EssentialLink from 'components/EssentialLink.vue';
+import Toolbar from 'components/Toolbar.vue';
 import { useMeta } from 'quasar';
+import { defineComponent, ref } from 'vue';
+import searchform from 'src/components/SearchForm.vue';
+import frontMatter from 'front-matter';
 
 const metaData = {
   title: 'JobBoard',
@@ -104,17 +94,13 @@ const metaData = {
   }
 };
 
-import { defineComponent, ref } from 'vue';
-import SwitchLanguage from 'src/components/SwitchLanguage.vue';
-import searchform from 'src/components/SearchForm.vue';
-
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
     EssentialLink,
-    SwitchLanguage,
-    searchform
+    searchform,
+    Toolbar
   },
 
   setup()
@@ -124,6 +110,7 @@ export default defineComponent({
 
     return {
       slide: 'first',
+      metas: [],
       leftDrawerOpen,
       toggleLeftDrawer()
       {
@@ -168,6 +155,28 @@ export default defineComponent({
     {
       return process.env.YAWIK_BACKGROUND;
     }
+  },
+  mounted()
+  {
+    const illustrations = require.context(
+      '../pages/infos',
+      true,
+      /^.*\.md$/
+    );
+
+    const arr = illustrations.keys();
+    const records = arr.slice(Math.max(arr.length - 6, 0)).reverse();
+
+    records.forEach(fileName =>
+    {
+      const data = illustrations(fileName).default;
+      const content = frontMatter(data);
+      const attributes = content.attributes;
+      console.log(fileName);
+
+      attributes.filename = fileName;
+      this.metas.push(content.attributes);
+    });
   }
 });
 
@@ -187,6 +196,7 @@ export default defineComponent({
 {
   "en": {
     "jobboard": "Job portal",
+    "applicants": "Applicants",
     "search": "find jobs",
     "what": "what are you looking for?",
     "where": "where do you search?",
@@ -205,6 +215,7 @@ export default defineComponent({
   },
   "de": {
     "jobboard": "Stellenbörse",
+    "applicants": "Bewerber",
     "search": "Jobs finden",
     "what": "was suchen sie?",
     "where": "wo suchen sie?",
@@ -223,6 +234,7 @@ export default defineComponent({
   },
   "fr": {
     "jobboard": "Bourse d'emploi",
+    "applicants": "Candidates",
     "search": "Trouver des jobs",
     "what": "que cherchez-vous ?",
     "where": "où cherchez-vous ?",

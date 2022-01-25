@@ -1,15 +1,11 @@
 <template>
-    <div>
-      <h1>Hello World</h1>
-    </div>
+  <div>
+    <h1>123</h1>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "TestComponent"
-    }
+export default {
+  name: 'TestComponent'
+};
 </script>
-
-<style scoped>
-
-</style>
