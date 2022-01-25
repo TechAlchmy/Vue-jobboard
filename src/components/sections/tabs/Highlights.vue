@@ -8,7 +8,10 @@
         <span v-for="val in rows" :key="val.id" class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
           <q-card class="jobs fit">
             <q-card-section>
-              <q-item clickable>
+              <q-item
+                clickable
+                @click="route(val.id, val.attributes.jobTitle)"
+              >
                 <q-item-section avatar>
                   <q-img fit="contain" :src="jobHost + val.attributes.logo.formats.thumbnail.url" height="50px"
                          width="100px"
@@ -116,6 +119,16 @@ export default {
     this.getJobs();
   },
   methods: {
+    route(id, title)
+    {
+      this.$router.push({
+        name: 'jobs',
+        params: {
+          id: id,
+          title: title
+        }
+      });
+    },
     onRequest(props)
     {
       const {
