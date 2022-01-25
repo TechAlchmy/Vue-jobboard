@@ -38,8 +38,6 @@ Values in `.env.local` overwrite those in `.env`
 
 | Name                         | Value                                      | 
 |------------------------------|--------------------------------------------|
-| ALGOLIA_NAME                 | your algolia name                          |
-| ALGOLIA_KEY                  | your algolia key                           |
 | YAWIK_BACKGROUND             | Background Image on Startpage              |
 | YAWIK_EXTERNAL_JOBS          | https://yawik.org/demo/de/jobboard         |
 | YAWIK_JOB_URL                | Endpoint for job details                   |

@@ -73,7 +73,7 @@ export default defineComponent({
   },
   mounted()
   {
-    console.log(this.$route.params);
+    //iconsole.log(this.$route.params);
     const fileName = this.$route.params.date + '/' + this.$route.params.title;
     import('./' + fileName + '.md').then(m =>
     {

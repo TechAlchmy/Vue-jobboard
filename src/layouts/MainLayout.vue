@@ -43,7 +43,7 @@
     </q-header>
 
     <q-footer bordered class="bg-white text-primary">
-      <q-tabs v-model="footer" no-caps active-color="primary" indicator-color="transparent" class="text-grey">
+      <q-tabs no-caps active-color="primary" indicator-color="transparent" class="text-grey">
         <q-tab name="imprint" :label="$t('imprint')" />
         <q-tab name="privary" :label="$t('privacy')" />
         <q-tab name="terms" :label="$t('terms')" />
