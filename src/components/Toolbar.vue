@@ -8,7 +8,7 @@
       :aria-label="$t('menu')"
       @click="emitData"
     >
-      <q-tooltip delay="1000">
+      <q-tooltip :delay="1000">
         {{ $t('for-developers') }}
       </q-tooltip>
     </q-btn>
