@@ -89,8 +89,9 @@ export default defineComponent({
     "find-jobs": "find jobs",
     "general": "general",
     "prices": "prices",
-    "remembered-jobs": "gespeicherte Stellenanzeigen",
-    "about-yawik": "about Yawik"
+    "remembered-jobs": "saved jobs",
+    "about-yawik": "about Yawik",
+    "documentation": "Documentation"
   },
   "de": {
     "for-applicants": "für Bewerber",
@@ -100,19 +101,21 @@ export default defineComponent({
     "find-jobs": "Jobs finden",
     "general":" Allgemein",
     "prices": "Preise",
-    "remembered-jobs": "gespeicherte Stellenanzeigen",
-    "about-yawik": "über Yawik"
+    "remembered-jobs": "gespeicherte Jobs",
+    "about-yawik": "über Yawik",
+    "documentation": "Dokumentation"
   },
   "fr": {
-    "for-applicants": "for applicants",
-    "for-companies": "for companies",
+    "for-applicants": "pour les candidats",
+    "for-companies": "pour les entreprises",
     "for-developers": "pour les développeurs de logiciels",
-    "create-jobs": "create job posting",
-    "find-jobs": "find jobs",
+    "create-jobs": "Créer une offre d'emploi",
+    "find-jobs": "Trouver des jobs",
     "general": "général",
     "prices": "prices",
-    "remembered-jobs": "saved jobs",
-    "about-yawik": "à propos de Yawik"
+    "remembered-jobs": "annonces d'emploi enregistrées",
+    "about-yawik": "à propos de Yawik",
+    "documentation": "Documentation"
   }
 }
 </i18n>
