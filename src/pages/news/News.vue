@@ -50,12 +50,13 @@ export default defineComponent({
     }
     function pageKeywords(val)
     {
-      title.value = val; // will automatically trigger a Meta update due to the binding
+      keywords.value = val;
     }
     function pageDescription(val)
     {
-      title.value = val; // will automatically trigger a Meta update due to the binding
+      description.value = val;
     }
+
     return {
       pageTitle,
       pageDescription,
