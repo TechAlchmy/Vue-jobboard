@@ -19,7 +19,7 @@
                   <q-item-label align="left"
                                 caption
                   >
-                    {{ diff(today,val.attributes.createdAt) }} {{ $t('days') }}
+                    {{ $t('days', [diff(today,val.attributes.createdAt)]) }}
                   </q-item-label>
                 </q-item-section>
                 <q-item-section>
@@ -44,7 +44,9 @@
               >
                 <q-item-section avatar>
                   <q-img fit="contain" :src="val.organizationLogo" width="100px" height="50px" />
-                  <q-item-label align="left" caption>{{ diff(today,new Date(val.dateStart)) }} {{ $t('days') }}</q-item-label>
+                  <q-item-label align="left" caption>
+                    {{ $t('days',[diff(today,new Date(val.dateStart))]) }}
+                  </q-item-label>
                 </q-item-section>
 
                 <q-item-section>
@@ -274,16 +276,19 @@ export default {
 </style>
 
 <i18n>
-  {
+{
   "en": {
-  "search-placeholder": "Job title, Company or Location",
-  "first-ad": "Place your first ad! Free of charge.",
-  "days": "days",
+    "search-placeholder": "Job title, Company or Location",
+    "first-ad": "Place your first ad! Free of charge.",
+    "days": "{0} days ago",
   },
   "de": {
-  "search-placeholder": "Anzeigentitel, Firma oder Ort",
-  "first-ad": "Schalten sie ihre erste Anzeige! Kostenlos.",
-  "days": "Tage"
+    "search-placeholder": "Anzeigentitel, Firma oder Ort",
+    "first-ad": "Schalten sie ihre erste Anzeige! Kostenlos.",
+    "days": "vor {0} Tagen"
+  },
+  "fr": {
+    "days": "il y a {0} jours"
   }
-  }
+}
 </i18n>
