@@ -11,7 +11,7 @@ components:
 
 sofort weiter zum [Eingabeformular](https://jobwizard.yawik.org)
 
-## Best Praktice
+## Best Practice
 
 
 
