@@ -17,7 +17,6 @@ Jobbörsen investieren viel Zeit, um Arbeitgeber und Arbeitsuchende zusammenzuf�
 
 Und dann gibt es die guten Entwickler rund um Quasar. Dem Framework, was dem Yawik Projekt die notwendige Geschwindigkeit verleiht die Tools zu entwickeln, die das Personalwesen braucht.
 
-
 ## Yawik Funktionen
 
 - Aktuell kann man mit Yawik kostenlos Stellenazeigen auf Google Jobs veröffentlichen.
@@ -26,17 +25,17 @@ Und dann gibt es die guten Entwickler rund um Quasar. Dem Framework, was dem Yaw
 - Bewerbungsformulare für ihre Anzeigen nutzen.
 - Stellenanzeigen in eigene Homepage einbinden.
 
-
-
 ## Stellenbörse (Jobboard)
 
-TBD
+Die Stellenbörse ist für den Jobsuchenden. 
 
 ## Anzeigenmanagement (Jobwizard)
 
-TBD
+Das Anzeigenmanagement richtet sich an Arbeitgeber. Es ermöglicht damit die Eingabe, die Verwaltung und die Veröffentlichung von Stellenanzeigen.
 
 ## Bewerbungsformular (Application Form)
 
-TBD
+es gibt ein Bewerbungsformular unter https://form.yawik.org
+
+Das Formular nutzt z.Z. für den Mailversand unser altes Yawik.
 
