@@ -19,6 +19,7 @@
                   <q-item-label align="center"
                                 caption
                   >
+                    <q-tooltip :delay="1000">{{ new Date(val.attributes.publishedAt).toLocaleString($root.$i18n.locale) }}</q-tooltip>
                     {{ since(val.attributes.createdAt) }}
                   </q-item-label>
                 </q-item-section>

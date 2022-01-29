@@ -55,7 +55,8 @@
         icon="add"
         color="secondary"
         :label="$t('create-job')"
-        to="/info/stellenanzeige-erstellen"
+        type="a"
+        href="https://jobwizard.yawik.org"
       />
     </q-page-sticky>
   </q-layout>
