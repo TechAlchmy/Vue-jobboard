@@ -7,7 +7,18 @@ components:
 
 # Über Yawik
 
-die Yawik Idee ist schon alt. Vor bald 10 Jahren hatten wir es [schon mal versucht](https:old.yawik.org). Aber wir waren zu früh. Die Technologien waren noch nicht soweit. Jetzt sind sie es. Und diesmal wird es funktionieren. Open Source für das Personalwesen. Eine Anwendung für alle.
+Yawik stellt verschiedene Tools auf Basis von [Quasar](https://quasar.dev) zur Verfügung. Mit dem Komponten Framework können wir viel schneller entwickeln, als [früher](https:old.yawik.org). Im Kern bleibt aber alles bei der alten Idee. Ziel ist es das Personalwesen und Open Source zusammenbringen. Was bedeutet das?
+
+Gute Software Entwickler haben es nicht schwer einen neuen Job zu finden. Die richtig Guten müssen nicht in Stellenbörsen suchen. Manche wollen es auch nicht, weil eine Stellenanzeige nicht dem entspricht, was sie von einer Aufgabenstellung erwarten. Gute Software Entwickler können sich den Job aussuchen, der ihnen am besten gefällt. Kurz, sie müssen nicht suchen.
+
+Nicht nur Jobbörsen haben es schwer gute Entwickler zu finden.
+
+Jobbörsen investieren viel Zeit, um Arbeitgeber und Arbeitsuchende zusammenzuführen. Sie bekommen Geld für ihre Arbeit. Und ihre Arbeit ist wichtig. Aber es gibt viel Luft, um die Effizienz zu verbessen.
+
+Und dann gibt es die guten Entwickler rund um Quasar. Dem Framework, was dem Yawik Projekt die notwendige Geschwindigkeit verleiht die Tools zu entwickeln, die das Personalwesen braucht.
+
+
+## Yawik Funktionen
 
 - Aktuell kann man mit Yawik kostenlos Stellenazeigen auf Google Jobs veröffentlichen.
 - Das ganze Jobportal im eigenen Design betreiben.
@@ -15,4 +26,17 @@ die Yawik Idee ist schon alt. Vor bald 10 Jahren hatten wir es [schon mal versuc
 - Bewerbungsformulare für ihre Anzeigen nutzen.
 - Stellenanzeigen in eigene Homepage einbinden.
 
+
+
+## Stellenbörse (Jobboard)
+
+TBD
+
+## Anzeigenmanagement (Jobwizard)
+
+TBD
+
+## Bewerbungsformular (Application Form)
+
+TBD
 
