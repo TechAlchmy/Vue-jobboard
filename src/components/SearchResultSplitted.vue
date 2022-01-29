@@ -12,9 +12,7 @@
               <q-img fit="contain" :src="jobHost + val.attributes.logo.formats.thumbnail.url" height="50px"
                      width="100px"
               />
-              <q-item-label align="left"
-                            caption
-              >{{ diff(today,val.attributes.createdAt) }} {{ $t('days') }}</q-item-label>
+              <date :date="val.attributes.createdAt" />
             </q-item-section>
             <q-item-section>
               <q-item-label align="left">
@@ -33,13 +31,15 @@
 </template>
 
 <script>
-import { date } from 'quasar';
-// destructuring to keep only what is needed
-const { getDateDiff } = date;
+import Date from 'src/components/Date.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'SearchResultSplitted',
+  components:
+  {
+    Date
+  },
   emits: ['click'],
   setup()
   {
@@ -55,7 +55,6 @@ export default defineComponent({
         page: 1,
         rowsPerPage: 10
       },
-      today: new Date()
     };
   },
   data()
@@ -71,10 +70,6 @@ export default defineComponent({
         {
           return process.env.YAWIK_JOB_URL;
         },
-        diff()
-        {
-          return getDateDiff;
-        }
       },
   mounted()
   {

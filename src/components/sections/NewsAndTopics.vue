@@ -16,7 +16,7 @@
           <q-card-actions>
             <q-badge color="secondary">{{ val.cat }}</q-badge>
             <q-space />
-            <q-btn flat>{{ new Date(val.date).toLocaleString($root.$i18n.locale) }}</q-btn>
+            <date :date="val.date" />
           </q-card-actions>
         </q-card>
       </span>
@@ -28,19 +28,20 @@
 import frontMatter from 'front-matter';
 
 import { defineComponent } from 'vue';
+import Date from 'src/components/Date.vue';
 
 export default defineComponent({
   name: 'NewsAndTopics',
+  components:
+  {
+    Date
+  },
   data()
   {
     return {
       metas: []
     };
   },
-  computed:
-      {
-
-      },
   watch: {
     files()
     {
