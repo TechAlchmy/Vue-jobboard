@@ -25,11 +25,11 @@ Und dann gibt es die guten Entwickler rund um Quasar. Dem Framework, was dem Yaw
 - Bewerbungsformulare für ihre Anzeigen nutzen.
 - Stellenanzeigen in eigene Homepage einbinden.
 
-## Stellenbörse (Jobboard)
+## Stellenbörse (jobboard)
 
 Die Stellenbörse ist für den Jobsuchenden. 
 
-## Anzeigenmanagement (Jobwizard)
+## Anzeigenmanagement (jobwizard)
 
 Das Anzeigenmanagement richtet sich an Arbeitgeber. Es ermöglicht damit die Eingabe, die Verwaltung und die Veröffentlichung von Stellenanzeigen.
 
@@ -39,3 +39,7 @@ es gibt ein Bewerbungsformular unter https://form.yawik.org
 
 Das Formular nutzt z.Z. für den Mailversand unser altes Yawik.
 
+
+## Software Stack
+
+Yawik verwendet [Quasar](https://quasar.dev) für Frontend und [Strapi](https://strapi.io) für das Backend.
