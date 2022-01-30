@@ -19,6 +19,7 @@ const routes = [
         component: () => import('pages/Jobs.vue'),
       },
       {
+        // path: ':lang(de|en|fr)/:filename',
         path: 'info/:filename',
         name: 'info',
         component: () => import('pages/Info.vue'),

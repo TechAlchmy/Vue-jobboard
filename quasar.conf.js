@@ -71,7 +71,7 @@ module.exports = configure(function(ctx)
 
       // rtl: true, // https://quasar.dev/options/rtl-support
       // preloadChunks: true,
-      // showProgress: false,
+      showProgress: ctx.dev,
       // gzip: true,
       // analyze: true,
 
@@ -92,6 +92,7 @@ module.exports = configure(function(ctx)
               emitErrors: false
             }
           ]);
+
         chain.module.rule('i18n')
           .resourceQuery(/blockType=i18n/)
           .type('javascript/auto')
